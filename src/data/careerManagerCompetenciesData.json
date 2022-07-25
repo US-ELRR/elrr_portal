@@ -1,0 +1,25 @@
+[
+  {
+    "competencyid": 100,
+    "competencyframeworktitle": "Skill and Roles: Business Skills and Acumen",
+    "competencyframeworkversion": null,
+    "competencyframeworkidentifier": null,
+    "competencyframeworkdescription": null,
+    "competencyframeworksubject": null,
+    "competencyframeworkvalidstartdate": null,
+    "competencyframeworkvalidenddate": "04/01/2021",
+    "competencydefinitionidentifier": null,
+    "competencydefinitionidentifierurl": null,
+    "competencytaxonomyid": null,
+    "competencydefinitionvalidstartdate": null,
+    "competencydefinitionvalideenddate": null,
+    "competencydefinitionparentidentifier": null,
+    "competencydefinitionparenturl": null,
+    "competencydescriptionparentcode": null,
+    "competencydefinitioncode": null,
+    "competencydefinitionstatement": null,
+    "competencydefinitiontypeurl": null,
+    "competencydefinitiontype": null,
+    "recordstatus": "ACTIVE"
+  }
+]

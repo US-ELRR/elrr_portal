@@ -1,0 +1,168 @@
+[
+  {
+    "personnel": {
+      "person": {
+        "personid": 104,
+        "name": "Alice Beth Smith",
+        "firstName": "Alice",
+        "middleName": "Beth",
+        "lastName": "Smith",
+        "namePrefix": "Ms.",
+        "titleAffixcode": null,
+        "nameSuffix": null,
+        "qualificationAffixcode": null,
+        "maidenName": "Smith",
+        "preferredName": null,
+        "humanResourceIdentifier": "0987654321",
+        "personnelIdentificationSystem": null,
+        "birthdate": "07/04/1985",
+        "sex": "F",
+        "primaryLanguage": "English",
+        "militaryVeteranindicator": "Y",
+        "recordStatus": "ACTIVE"
+      }
+    },
+    "history": [
+      {
+        "employmentDate": "2012-07-07",
+        "courses": [
+          {
+            "status": "ABANDONED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "ABANDONED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "employmentDate": "2013-07-07",
+        "courses": [
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "employmentDate": "2015-07-07",
+        "courses": [
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "ABANDONED"
+          }
+        ]
+      },
+      {
+        "employmentDate": "2019-07-07",
+        "courses": [
+          {
+            "status": "REGISTERED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "personnel": {
+      "person": {
+        "personid": 100,
+        "name": "Alexandrina Annabelle Arredondo-Arteaga",
+        "firstName": "Alexandrina",
+        "middleName": "Annabelle",
+        "lastName": "Arredondo-Arteaga",
+        "namePrefix": "Ms.",
+        "titleAffixcode": null,
+        "nameSuffix": null,
+        "qualificationAffixcode": null,
+        "maidenName": "Atkinson-Abbas",
+        "preferredName": null,
+        "humanResourceIdentifier": "3599900000",
+        "personnelIdentificationSystem": null,
+        "birthdate": "12/31/2000",
+        "sex": "F",
+        "primaryLanguage": "Spanish",
+        "militaryVeteranindicator": "Y",
+        "recordStatus": "ACTIVE"
+      }
+    },
+    "history": [
+      {
+        "employmentDate": "2012-07-07",
+        "courses": [
+          {
+            "status": "ABANDONED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "employmentDate": "2018-07-07",
+        "courses": [
+          {
+            "status": "ABANDONED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "employmentDate": "2019-07-07",
+        "courses": [
+          {
+            "status": "REGISTERED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "ABANDONED"
+          },
+          {
+            "status": "COMPLETED"
+          },
+          {
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ]
+  }
+]

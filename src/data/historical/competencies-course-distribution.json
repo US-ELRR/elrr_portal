@@ -1,0 +1,74 @@
+[
+  {
+    "personnel": {
+      "person": {
+        "personid": 104,
+        "name": "Alice Beth Smith",
+        "firstName": "Alice",
+        "middleName": "Beth",
+        "lastName": "Smith",
+        "namePrefix": "Ms.",
+        "titleAffixcode": null,
+        "nameSuffix": null,
+        "qualificationAffixcode": null,
+        "maidenName": "Smith",
+        "preferredName": null,
+        "humanResourceIdentifier": "0987654321",
+        "personnelIdentificationSystem": null,
+        "birthdate": "07/04/1985",
+        "sex": "F",
+        "primaryLanguage": "English",
+        "militaryVeteranindicator": "Y",
+        "recordStatus": "ACTIVE"
+      }
+    },
+    "buckets": [
+      {
+        "name": "Personnel Management and Mentoring",
+        "courses": [{}]
+      },
+      {
+        "name": "Skills and Roles: Business Skills and Acumen",
+        "courses": [{}]
+      },
+      {
+        "name": "Contract Principles: General Contracting Concepts",
+        "courses": [{}, {}]
+      }
+    ]
+  },
+  {
+    "personnel": {
+      "person": {
+        "personid": 100,
+        "name": "Alexandrina Annabelle Arredondo-Arteaga",
+        "firstName": "Alexandrina",
+        "middleName": "Annabelle",
+        "lastName": "Arredondo-Arteaga",
+        "namePrefix": "Ms.",
+        "titleAffixcode": null,
+        "nameSuffix": null,
+        "qualificationAffixcode": null,
+        "maidenName": "Atkinson-Abbas",
+        "preferredName": null,
+        "humanResourceIdentifier": "3599900000",
+        "personnelIdentificationSystem": null,
+        "birthdate": "12/31/2000",
+        "sex": "F",
+        "primaryLanguage": "Spanish",
+        "militaryVeteranindicator": "Y",
+        "recordStatus": "ACTIVE"
+      }
+    },
+    "buckets": [
+      {
+        "name": "Personnel Management and Mentoring",
+        "courses": [{}, {}]
+      },
+      {
+        "name": "Skills and Roles: Business Skills and Acumen",
+        "courses": [{}, {}]
+      }
+    ]
+  }
+]
