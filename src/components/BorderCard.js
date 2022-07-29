@@ -1,4 +1,4 @@
-export default function HistoricalDetailsCard({
+export default function BorderCard({
   objArr,
   title,
   subtitle,

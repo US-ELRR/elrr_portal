@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
-import HistoricalDetailsCard from '@/components/common/HistoricalDetailsCard';
+import BorderCard from '@/components/BorderCard';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
@@ -63,7 +63,7 @@ export default function PersonPage() {
             cols={3}
           />
 
-          <HistoricalDetailsCard
+          <BorderCard
             key={'courses'}
             objArr={userData?.learner?.courses.map((course) => ({
               // ...course,
@@ -81,7 +81,7 @@ export default function PersonPage() {
             title={'Courses'}
             subtitle={'Course'}
           />
-          <HistoricalDetailsCard
+          <BorderCard
             key={'competencies'}
             cols={4}
             objArr={userData?.learner?.competencies.map((competency) => ({
