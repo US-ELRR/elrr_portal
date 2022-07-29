@@ -2,6 +2,7 @@ import CareerManagerDashboard from '@/components/manager/career/CareerManagerDas
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import LearnerDashboard from '@/components/learner/LearnerDashboard';
 import TrainingManagerDashboard from '@/components/manager/training/TrainingManagerDashboard';
+import SystemAdminDashboard from '@/components/admin/SystemAdminDashboard';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 
@@ -14,6 +15,7 @@ export default function Dashboard() {
       {userData?.role === 'CAREER_MANAGER' && <CareerManagerDashboard />}
       {userData?.role === 'TRAINING_MANAGER' && <TrainingManagerDashboard />}
       {userData?.role === 'LEARNER' && <LearnerDashboard />}
+      {userData?.role === 'SYSTEM_ADMIN' && <SystemAdminDashboard />}
     </DefaultLayout>
   );
 }

@@ -1,10 +1,11 @@
 {
   "extends": [
+    "next/babel",
     "next/core-web-vitals"
   ],
   "plugins": [
-    "sort-imports-es6-autofix"
-    // "jsx-a11y"
+    "sort-imports-es6-autofix",
+    "unused-imports"
   ],
   "rules": {
     "react/jsx-key": "off",
@@ -34,6 +35,17 @@
         "allowObjectEnd": true,
         "allowArrayStart": true,
         "allowArrayEnd": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
       }
     ]
   }

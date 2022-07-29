@@ -1,7 +1,6 @@
 import CompletedCompetencies from '@/components/learner/common/CompletedCompetencies';
 import EnrolledCourses from '@/components/learner/common/EnrolledCourses';
 import LearnerBanner from './common/LearnerBanner';
-import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 
 export default function LearnerDashboard() {
