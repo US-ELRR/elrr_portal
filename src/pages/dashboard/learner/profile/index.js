@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import BorderCard from '@/components/BorderCard';
+import CardData from '@/components/learner/CardData';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
-import BorderCard from '@/components/BorderCard';
-import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 
@@ -12,7 +10,7 @@ export default function PersonPage() {
   const userData = useStore((state) => state.userData);
 
   const {
-    query: { personid },
+    query: { },
   } = useAuthRouter();
   return (
     <DefaultLayout>
@@ -63,37 +61,41 @@ export default function PersonPage() {
             cols={3}
           />
 
-          <BorderCard
-            key={'courses'}
-            objArr={userData?.learner?.courses.map((course) => ({
-              // ...course,
-              Id: course.courseid,
-              'Course Provider': course.courseprovidername,
-              'Course Name': course.name,
-              'Course Identifier': course.courseidentifier,
-              'Course Level': course.courselevel,
-              'Course Instruction Mode': course.courseinstructionmethod,
-              'Course Department': course.departmentname,
-              'Start Date': course.coursestartdate,
-              'End Date': course.courseenddate,
-              'Enrollment Date': course.courseenrollmentdate,
-            }))}
-            title={'Courses'}
-            subtitle={'Course'}
-          />
-          <BorderCard
-            key={'competencies'}
-            cols={4}
-            objArr={userData?.learner?.competencies.map((competency) => ({
-              // ...competency,
-              Id: competency.competencyid,
-              'Competency Owner': 'Defense Acquisition University',
-              'Framework Name': competency.competencyframeworktitle,
-              'Framework Version': 'v1.0.3',
-            }))}
-            title={'Competencies'}
-            subtitle={'Competency'}
-          />
+          <BorderCard title={'Courses'}>
+            <CardData
+              key={'courses'}
+              objArr={userData?.learner?.courses.map((course) => ({
+                //...course,
+                Id: course.courseid,
+                'Course Provider': course.courseprovidername,
+                'Course Name': course.name,
+                'Course Identifier': course.courseidentifier,
+                'Course Level': course.courselevel,
+                'Course Instruction Mode': course.courseinstructionmethod,
+                'Course Department': course.departmentname,
+                'Start Date': course.coursestartdate,
+                'End Date': course.courseenddate,
+                'Enrollment Date': course.courseenrollmentdate,
+              }))}
+              subtitle={'Course'}
+            />
+
+          </BorderCard>
+          <BorderCard title={'Competencies'}>
+            <CardData
+              key={'competencies'}
+              cols={4}
+              objArr={userData?.learner?.competencies.map((competency) => ({
+                // ...competency,
+                Id: competency.competencyid,
+                'Competency Owner': 'Defense Acquisition University',
+                'Framework Name': competency.competencyframeworktitle,
+                'Framework Version': 'v1.0.3',
+              }))}
+              subtitle={'Competency'} />
+
+
+          </BorderCard>
         </div>
       </div>
     </DefaultLayout>

@@ -1,13 +1,11 @@
 import CareerManagerDashboard from '@/components/manager/career/CareerManagerDashboard';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import LearnerDashboard from '@/components/learner/LearnerDashboard';
-import TrainingManagerDashboard from '@/components/manager/training/TrainingManagerDashboard';
 import SystemAdminDashboard from '@/components/admin/SystemAdminDashboard';
-import useAuthRouter from '@/hooks/useAuthRouter';
+import TrainingManagerDashboard from '@/components/manager/training/TrainingManagerDashboard';
 import useStore from '@/store/store';
 
 export default function Dashboard() {
-  const router = useAuthRouter();
   const userData = useStore((state) => state.userData);
 
   return (

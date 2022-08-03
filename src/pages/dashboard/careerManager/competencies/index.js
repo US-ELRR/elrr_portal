@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
 import axios from 'axios';
@@ -18,6 +19,7 @@ export default function CompetenciesPage() {
     axios
       .get('/api/competencies')
       .then(({ data }) => {
+        console.log('datababy: ', data)
         setCompetencies(data);
       })
       .catch((err) => console.log(err));

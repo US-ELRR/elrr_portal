@@ -1,6 +1,6 @@
 import personnelData from '@/data/personnelData.json';
 
-export default function handler(req, res, next) {
+export default function handler(req, res) {
   // get the personid from the url
   const { id } = req.query;
   const {

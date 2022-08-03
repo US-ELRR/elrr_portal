@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import Banner from '@/components/manager/common/Banner';
 import CompetenciesPieChart from './CompetenciesRadarChart';
 import CompletedCompetencies from '@/components/manager/common/CompletedCompetencies';
@@ -45,7 +46,7 @@ export default function CareerManagerDashboard() {
                   className={classNames(
                     `p-2 rounded w-full text-left hover:bg-dod-500/10 focus:outline-dod-100`,
                     assignedLearner?.personnel?.person?.personid ===
-                      learner.personnel.person.personid && 'bg-gray-50 shadow'
+                    learner.personnel.person.personid && 'bg-gray-50 shadow'
                   )}
                   onClick={() => {
                     console.log(learner);

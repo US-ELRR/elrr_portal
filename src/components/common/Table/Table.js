@@ -10,7 +10,7 @@ export default function Table({
   keys,
   data,
   primaryKey,
-  onClick = () => {},
+  onClick = () => { },
 }) {
   return (
     <div className='px-4 sm:px-6 lg:px-8'>
@@ -24,8 +24,9 @@ export default function Table({
               >
                 <thead className='bg-gray-50 '>
                   <tr>
-                    {cols.map((col) => (
+                    {cols.map((col, index) => (
                       <th
+                        key={index}
                         scope='col'
                         className='text-lg sticky top-0 z-10 hidden border-b border-gray-300 bg-gray-50 bg-opacity-75 pl-2 py-2 text-left font-semibold text-gray-900 backdrop-blur backdrop-filter sm:table-cell'
                       >
@@ -36,16 +37,16 @@ export default function Table({
                 </thead>
                 <tbody className='bg-white text-left '>
                   {data?.length > 0 &&
-                    data.map((item) => {
+                    data.map((item, index) => {
                       return (
                         <tr
-                          key={item.name}
+                          key={index}
                           name={item.name}
-                          className='hover:text-dod-100 even:bg-gray-50 cursor-pointer group'
+                          className='hover:text-dod-100 even:bg-gray-50 group cursor-pointer'
                           onClick={() => onClick(item[primaryKey])}
                         >
-                          {keys.map((key) => (
-                            <td className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 group-hover:text-dod-100'>
+                          {keys.map((key, index) => (
+                            <td key={index} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 group-hover:text-dod-100'>
                               {item[key] || '-'}
                             </td>
                           ))}

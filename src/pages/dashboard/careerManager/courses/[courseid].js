@@ -21,7 +21,7 @@ export default function CoursePage() {
         })
         .catch((err) => console.log(err));
     }
-  }, []);
+  }, [courseid]);
 
   return (
     <DefaultLayout>

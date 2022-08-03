@@ -1,8 +1,3 @@
-import { PolarArea } from 'react-chartjs-2';
-import { unstable_batchedUpdates } from 'react-dom';
-import { useEffect, useMemo, useState } from 'react';
-import axios from 'axios';
-
 import {
   ArcElement,
   BarElement,
@@ -16,6 +11,11 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
+import { useEffect, useMemo, useState } from 'react';
+
+import { PolarArea } from 'react-chartjs-2';
+import axios from 'axios';
+import { unstable_batchedUpdates } from 'react-dom';
 
 ChartJS.register(
   RadialLinearScale,
