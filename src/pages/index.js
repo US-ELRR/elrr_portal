@@ -31,7 +31,6 @@ export default function LoginPage() {
     axios
       .post('/api/login', { ...credentials })
       .then((res) => {
-        console.log(res.data);
         setUserData(res.data);
         router.push('/dashboard');
       })

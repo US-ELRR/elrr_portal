@@ -21,7 +21,6 @@ export default function PersonPage() {
     // fetch the data
     if (personid) {
       axios.get(`/api/personnel/${personid}`, {}).then((res) => {
-        console.log(res.data);
         setData(res.data);
       });
     }

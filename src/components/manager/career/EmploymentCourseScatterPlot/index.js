@@ -140,8 +140,6 @@ export default function EmploymentCourseScatterPlot({ userId }) {
     }
   }, [userId]);
 
-  console.log('chartData', chartData);
-
   return chartData ? (
     <Bar data={chartData} options={options} />
   ) : (

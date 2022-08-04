@@ -7,8 +7,6 @@ export default function handler(req, res) {
     data: { learners },
   } = personnelData;
 
-  // console.log(learners);
-
   // iterate over the array of learners
   let person = learners.find(
     (learner) => learner.personnel.person.personid == id

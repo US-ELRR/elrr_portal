@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
 import axios from 'axios';
@@ -15,8 +16,8 @@ export default function CompetencyPage() {
       .then(({ data }) => {
         setCompetency(data);
       })
-      .catch(() => {
-        console.log('error');
+      .catch((err) => {
+        console.log('error: ', err);
       });
   }, [competencyid]);
 

@@ -19,7 +19,6 @@ export default function CompetenciesPage() {
     axios
       .get('/api/competencies')
       .then(({ data }) => {
-        console.log('datababy: ', data)
         setCompetencies(data);
       })
       .catch((err) => console.log(err));
