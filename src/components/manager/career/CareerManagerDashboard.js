@@ -49,8 +49,6 @@ export default function CareerManagerDashboard() {
                     learner.personnel.person.personid && 'bg-gray-50 shadow'
                   )}
                   onClick={() => {
-                    console.log(learner);
-
                     setAssignedLearner(learner);
                   }}
                 >

@@ -26,8 +26,18 @@ const nav_options_learner = [
     path: '/dashboard', // will need to be reactive based on the user type
   },
   {
-    name: 'Transcript',
+    name: 'Profile',
     path: '/dashboard/learner/profile', // will need to be reactive based on the user type
+  }, {
+    name: 'Courses',
+    path: '/dashboard/learner/courses', // will need to be reactive based on the user type
+  }, {
+    name: 'Competencies',
+    path: '/dashboard/learner/competencies', // will need to be reactive based on the user type
+  },
+  {
+    name: 'Goals',
+    path: '/dashboard/learner/goals', // will need to be reactive based on the user type
   },
 ];
 

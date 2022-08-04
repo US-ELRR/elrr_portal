@@ -12,10 +12,10 @@ export default function CardData({
                     return (
                         <div
                             key={index}
-                        >
-                            <h2 className='text-xl font-semibold'>
-                                {subtitle} #{index + 1}
-                            </h2>
+                        >{subtitle && <h2 className='text-xl font-semibold'>
+                            {subtitle} #{index + 1}
+                        </h2>}
+
                             <div className={`grid grid-cols-${cols || 3} gap-4`}>
                                 {Object.keys(employment).map((key) => {
                                     // maps over the keys and returns the keys and values accordingly

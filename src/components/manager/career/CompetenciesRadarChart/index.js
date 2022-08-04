@@ -77,7 +77,6 @@ export default function CompetenciesRadarChart({ userId }) {
       },
     },
   };
-  console.log(chartData);
   useEffect(() => {
     if (!userId) return;
 
