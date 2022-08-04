@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
-import BorderCard from '@/components/BorderCard';
+import HistoricalDetailsCard from '@/components/common/HistoricalDetailsCard';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
+import { useRouter } from 'next/router';
 import useStore from '@/store/store';
 
 export default function PersonPage() {
@@ -71,7 +72,7 @@ export default function PersonPage() {
             title='Organization Data'
             cols={3}
           />
-          <BorderCard
+          <HistoricalDetailsCard
             key={'employment'}
             objArr={data.employment?.map((e) => ({
               // ...e,
@@ -86,7 +87,7 @@ export default function PersonPage() {
             title={'Employments'}
             subtitle={'Employment'}
           />
-          <BorderCard
+          <HistoricalDetailsCard
             key={'courses'}
             objArr={data.courses?.map((course) => ({
               // ...course,
@@ -104,7 +105,7 @@ export default function PersonPage() {
             title={'Courses'}
             subtitle={'Course'}
           />
-          <BorderCard
+          <HistoricalDetailsCard
             key={'competencies'}
             cols={4}
             objArr={data.competencies?.map((competency) => ({

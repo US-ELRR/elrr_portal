@@ -1,7 +1,5 @@
-import { Listbox, Tab } from '@headlessui/react';
-import { useCallback, useEffect, useState } from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import axios from 'axios';
+import Tab from '@headlessui/react';
 
 export function Tabs({ tabs }) {
   function classNames(...classes) {
@@ -41,101 +39,101 @@ export function Tabs({ tabs }) {
   );
 }
 
-function Competencies() {
-  const [query, setQuery] = useState({
-    keyword: '',
-    date: '',
-  });
+// function Competencies() {
+//   const [query, setQuery] = useState({
+//     keyword: '',
+//     date: '',
+//   });
 
-  const handleChange = (e) => {
-    setQuery({ ...query, [e.target.name]: e.target.value });
-  };
-  return (
-    <div className='flex items-center mt-4 gap-2'>
-      <input
-        className='w-1/3 py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
-        type='text'
-        name='keyword'
-        placeholder='Search Competencies'
-        value={query.keyword}
-        onChange={handleChange}
-      />
-      <input
-        className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
-        type='date'
-        name='date'
-        value={query.date}
-        onChange={handleChange}
-      />
-      <button className='inline-flex items-end px-4 py-2 text-sm font-bold leading-5 text-white transition duration-150 ease-in-out bg-dod-500 border border-gray-300 rounded-md hover:bg-dod-700 focus:outline-none focus:shadow-md focus:shadow-dod-500 focus:ring-dod-500 focus:ring-2 ring-offset-1'>
-        Search
-      </button>
-    </div>
-  );
-}
+//   const handleChange = (e) => {
+//     setQuery({ ...query, [e.target.name]: e.target.value });
+//   };
+//   return (
+//     <div className='flex items-center mt-4 gap-2'>
+//       <input
+//         className='w-1/3 py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
+//         type='text'
+//         name='keyword'
+//         placeholder='Search Competencies'
+//         value={query.keyword}
+//         onChange={handleChange}
+//       />
+//       <input
+//         className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
+//         type='date'
+//         name='date'
+//         value={query.date}
+//         onChange={handleChange}
+//       />
+//       <button className='inline-flex items-end px-4 py-2 text-sm font-bold leading-5 text-white transition duration-150 ease-in-out bg-dod-500 border border-gray-300 rounded-md hover:bg-dod-700 focus:outline-none focus:shadow-md focus:shadow-dod-500 focus:ring-dod-500 focus:ring-2 ring-offset-1'>
+//         Search
+//       </button>
+//     </div>
+//   );
+// }
 
-function SearchLearners() {
-  const [query, setQuery] = useState({
-    keyword: '',
-    date: '',
-    filter: '',
-  });
+// function SearchLearners() {
+//   const [query, setQuery] = useState({
+//     keyword: '',
+//     date: '',
+//     filter: '',
+//   });
 
-  const handleChange = (e) => {
-    setQuery({ ...query, [e.target.name]: e.target.value });
-  };
+//   const handleChange = (e) => {
+//     setQuery({ ...query, [e.target.name]: e.target.value });
+//   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//   };
 
-  const getData = useCallback(
-    (e) => {
-      e.preventDefault();
-      axios.get('/api/search', { params: query }).then((res) => {
-        console.dir(res.data);
-      });
-    },
-    [query]
-  );
+//   const getData = useCallback(
+//     (e) => {
+//       e.preventDefault();
+//       axios.get('/api/search', { params: query }).then((res) => {
+//         console.dir(res.data);
+//       });
+//     },
+//     [query]
+//   );
 
-  return (
-    <form onSubmit={getData}>
-      <div className='flex items-center mt-4 gap-2'>
-        <input
-          className='w-1/3 py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
-          type='text'
-          name='keyword'
-          placeholder='Search Course'
-          value={query.keyword}
-          onChange={handleChange}
-        />
-        <input
-          className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
-          type='date'
-          name='date'
-          value={query.date}
-          onChange={handleChange}
-        />
-        <select
-          className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
-          type=''
-          name='filter'
-          value={query.date}
-          onChange={handleChange}
-        >
-          <option value=''>Filter</option>
-        </select>
-        <input
-          type={'submit'}
-          as={'button'}
-          name={'submit'}
-          className='inline-flex items-end px-4 py-2 text-sm font-bold leading-5 text-white transition duration-150 ease-in-out bg-dod-500 border border-gray-300 rounded-md hover:bg-dod-700 focus:outline-none focus:shadow-md focus:shadow-dod-500 focus:ring-dod-500 focus:ring-2 ring-offset-1'
-        />
-      </div>
-    </form>
-  );
-}
+//   return (
+//     <form onSubmit={getData}>
+//       <div className='flex items-center mt-4 gap-2'>
+//         <input
+//           className='w-1/3 py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
+//           type='text'
+//           name='keyword'
+//           placeholder='Search Course'
+//           value={query.keyword}
+//           onChange={handleChange}
+//         />
+//         <input
+//           className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
+//           type='date'
+//           name='date'
+//           value={query.date}
+//           onChange={handleChange}
+//         />
+//         <select
+//           className='py-2 px-4 text-sm font-bold leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-dod-500 focus:ring-offset-1 focus:shadow-md focus:shadow-dod-500'
+//           type=''
+//           name='filter'
+//           value={query.date}
+//           onChange={handleChange}
+//         >
+//           <option value=''>Filter</option>
+//         </select>
+//         <input
+//           type={'submit'}
+//           as={'button'}
+//           name={'submit'}
+//           className='inline-flex items-end px-4 py-2 text-sm font-bold leading-5 text-white transition duration-150 ease-in-out bg-dod-500 border border-gray-300 rounded-md hover:bg-dod-700 focus:outline-none focus:shadow-md focus:shadow-dod-500 focus:ring-dod-500 focus:ring-2 ring-offset-1'
+//         />
+//       </div>
+//     </form>
+//   );
+// }
 
 export default function ManagerSearchPage() {
   return (

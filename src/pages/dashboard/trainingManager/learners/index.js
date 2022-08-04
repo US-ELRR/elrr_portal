@@ -1,19 +1,15 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import Link from 'next/link';
-import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 
-function modifyLearnerDataStructure(learners) {
-  return learners?.map((learner) => ({
-    id: learner.personnel.person.personid,
-    name: learner.personnel.person.name,
-    email: learner.personnel.contactInformation.electronicmailaddress,
-    organization: learner.personnel.organization.organizationdescription,
-  }));
-}
+// function modifyLearnerDataStructure(learners) {
+//   return learners?.map((learner) => ({
+//     id: learner.personnel.person.personid,
+//     name: learner.personnel.person.name,
+//     email: learner.personnel.contactInformation.electronicmailaddress,
+//     organization: learner.personnel.organization.organizationdescription,
+//   }));
+// }
 
 const cols = ['PersonId', 'Name', 'electronicmailaddress', 'Organization'];
 

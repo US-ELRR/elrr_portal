@@ -2,13 +2,14 @@
 // all users must come here first before they can access the app
 
 import { useEffect, useState } from 'react';
+
+import BrowserTab from '@/components/BrowserTab'
 import DODImage from '@/public/DOD.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Image from 'next/image';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
-import BrowserTab from '@/components/BrowserTab'
 
 export default function LoginPage() {
   const router = useAuthRouter();
@@ -41,7 +42,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (userData) router.push('/dashboard');
-  }, [userData]);
+  }, [userData, router]);
 
   return (
     <>
