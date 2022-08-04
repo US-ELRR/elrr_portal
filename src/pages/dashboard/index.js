@@ -1,6 +1,6 @@
 import CareerManagerDashboard from '@/components/manager/career/CareerManagerDashboard';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import LearnerDashboard from '@/components/learner/LearnerDashboard';
+import LearnerDashboard from '@/pages/dashboard/learner/LearnerDashboard';
 import SystemAdminDashboard from '@/components/admin/SystemAdminDashboard';
 import TrainingManagerDashboard from '@/components/manager/training/TrainingManagerDashboard';
 import useStore from '@/store/store';
