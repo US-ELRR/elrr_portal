@@ -34,8 +34,7 @@ export default function LoginPage() {
         setUserData(res.data);
         router.push('/dashboard');
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
       });
   };
 

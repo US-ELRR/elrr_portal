@@ -15,7 +15,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { PolarArea } from 'react-chartjs-2';
 import axios from 'axios';
-import { unstable_batchedUpdates } from 'react-dom';
+import unstable_batchedUpdates from 'react-dom';
 
 ChartJS.register(
   RadialLinearScale,
@@ -32,7 +32,6 @@ ChartJS.register(
 
 export default function CompetenciesRadarChart({ userId }) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const chartData = useMemo(() => {
@@ -85,13 +84,11 @@ export default function CompetenciesRadarChart({ userId }) {
       .then((res) => {
         unstable_batchedUpdates(() => {
           setData(res.data);
-          setLoading(false);
           setError(null);
         });
       })
       .catch((err) => {
         unstable_batchedUpdates(() => {
-          setLoading(false);
           setError(err);
           setData([]);
         });

@@ -1,12 +1,10 @@
-import { render, act, fireEvent } from '@testing-library/react';
-import useStore from '@/store/store';
+import { act, fireEvent, render } from '@testing-library/react';
+
 import Header from '@/components/common/Header';
-import singletonRouter, { useRouter } from 'next/router';
-import mockRouter from 'next-router-mock';
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import singletonRouter from 'next/router';
 
 jest.mock('@/store/store', () =>
-  jest.fn((set) => ({
+  jest.fn(() => ({
     userData: { user: { name: 'Test user', type: 'CareerManager' } },
     setUserData: jest.fn(),
     removeUserData: jest.fn(),

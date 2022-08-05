@@ -16,9 +16,7 @@ export default function CompetencyPage() {
       .then(({ data }) => {
         setCompetency(data);
       })
-      .catch((err) => {
-        console.log('error: ', err);
-      });
+      .catch();
   }, [competencyid]);
 
   return (

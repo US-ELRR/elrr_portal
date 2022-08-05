@@ -20,7 +20,7 @@ export default function CoursePage() {
         .then((res) => {
           setCourse(res.data);
         })
-        .catch((err) => console.log(err));
+        .catch();
     }
   }, [courseid]);
 
