@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
 import axios from 'axios';
@@ -19,6 +20,7 @@ export default function CompetencyPage() {
         setCompetency(response.data);
       })
       .catch((error) => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }, [competencyid]);

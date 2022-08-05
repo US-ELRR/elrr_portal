@@ -32,7 +32,6 @@ ChartJS.register(
 
 export default function CompetenciesRadarChart({ userId }) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const chartData = useMemo(() => {
@@ -85,13 +84,11 @@ export default function CompetenciesRadarChart({ userId }) {
       .then((res) => {
         unstable_batchedUpdates(() => {
           setData(res.data);
-          setLoading(false);
           setError(null);
         });
       })
       .catch((err) => {
         unstable_batchedUpdates(() => {
-          setLoading(false);
           setError(err);
           setData([]);
         });

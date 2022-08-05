@@ -26,7 +26,10 @@ export default function CoursesPage() {
       .then(({ data }) => {
         setCourses(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+      });
   }, []);
   return (
     <DefaultLayout>

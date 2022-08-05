@@ -4,12 +4,10 @@ import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
 import HistoricalDetailsCard from '@/components/common/HistoricalDetailsCard';
 import axios from 'axios';
-import useAuthRouter from '@/hooks/useAuthRouter';
 import { useRouter } from 'next/router';
 import useStore from '@/store/store';
 
 export default function PersonPage() {
-  const isAuthenticated = useAuthRouter();
   const {
     query: { personid },
   } = useRouter();
@@ -28,7 +26,7 @@ export default function PersonPage() {
 
   useEffect(() => {
     if (!userData) router.push('/');
-  }, [userData]);
+  }, [userData, router]);
 
   return (
     <DefaultLayout>

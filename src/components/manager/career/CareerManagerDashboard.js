@@ -26,7 +26,7 @@ export default function CareerManagerDashboard() {
     if (userData?.assigned) {
       setAssignedLearner(userData.assigned[0] || {});
     }
-  }, []);
+  }, [userData?.assigned]);
 
   return (
     <>

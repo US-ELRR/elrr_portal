@@ -21,7 +21,10 @@ export default function CompetenciesPage() {
       .then(({ data }) => {
         setCompetencies(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+      });
   }, []);
 
   return (

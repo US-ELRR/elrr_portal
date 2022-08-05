@@ -17,7 +17,8 @@ export default function CompetencyPage() {
         setCompetency(data);
       })
       .catch((err) => {
-        console.log('error: ', err);
+        // eslint-disable-next-line no-console
+        console.log(err);
       });
   }, [competencyid]);
 

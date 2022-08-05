@@ -4,7 +4,6 @@ import Link from 'next/link';
 import NewTable from '@/components/NewTable';
 
 export default function ImportList() {
-    const keys = ['competencyid', 'competencyframeworktitle', 'recordstatus'];
     return (
         <DefaultLayout>
             <Link href="/dashboard">

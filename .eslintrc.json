@@ -1,6 +1,5 @@
 {
   "extends": [
-    "next/babel",
     "next/core-web-vitals"
   ],
   "plugins": [
@@ -10,19 +9,6 @@
   "rules": {
     "no-console": 1,
     "react/jsx-key": "off",
-    "sort-imports-es6-autofix/sort-imports-es6": [
-      2,
-      {
-        "ignoreCase": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": [
-          "none",
-          "all",
-          "multiple",
-          "single"
-        ]
-      }
-    ],
     "lines-around-comment": [
       "error",
       {
