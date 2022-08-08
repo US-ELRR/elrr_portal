@@ -26,7 +26,7 @@ export default function CoursesPage() {
       .then(({ data }) => {
         setCourses(data);
       })
-      .catch((err) => console.log(err));
+      .catch();
   }, []);
   return (
     <DefaultLayout>

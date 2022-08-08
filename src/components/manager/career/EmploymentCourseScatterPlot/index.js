@@ -1,4 +1,3 @@
-import { Bar, Chart } from 'react-chartjs-2';
 import {
   BarElement,
   CategoryScale,
@@ -12,8 +11,9 @@ import {
 } from 'chart.js';
 import { useEffect, useMemo, useState } from 'react';
 
+import Bar from 'react-chartjs-2';
 import axios from 'axios';
-import { unstable_batchedUpdates } from 'react-dom';
+import unstable_batchedUpdates from 'react-dom';
 
 ChartJS.register(
   CategoryScale,
@@ -29,7 +29,6 @@ ChartJS.register(
 export default function EmploymentCourseScatterPlot({ userId }) {
   // fetch the data from the the db
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const options = {
     indexAxis: 'x', // x or y
@@ -126,14 +125,12 @@ export default function EmploymentCourseScatterPlot({ userId }) {
         .then((res) => {
           unstable_batchedUpdates(() => {
             setData(res.data);
-            setLoading(false);
             setError(null);
           });
         })
         .catch((err) => {
           unstable_batchedUpdates(() => {
             setData([]);
-            setLoading(false);
             setError(err);
           });
         });

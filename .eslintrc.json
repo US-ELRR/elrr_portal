@@ -1,7 +1,6 @@
 {
   "extends": [
-    "next/babel",
-    "next/core-web-vitals"
+    "next"
   ],
   "plugins": [
     "sort-imports-es6-autofix",

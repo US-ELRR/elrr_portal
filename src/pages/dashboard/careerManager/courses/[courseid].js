@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
 import axios from 'axios';
@@ -19,7 +20,7 @@ export default function CoursePage() {
         .then((res) => {
           setCourse(res.data);
         })
-        .catch((err) => console.log(err));
+        .catch();
     }
   }, [courseid]);
 

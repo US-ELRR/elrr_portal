@@ -21,7 +21,7 @@ export default function CompetenciesPage() {
       .then(({ data }) => {
         setCompetencies(data);
       })
-      .catch((err) => console.log(err));
+      .catch();
   }, []);
 
   return (

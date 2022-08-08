@@ -37,12 +37,12 @@ const useStore = create((set) => ({
   // on load check if there is user data in local storage
   userData: loadUserDataFromStorage(),
   setUserData: (userData) =>
-    set((state) => {
+    set(() => {
       setUserDataToStorage(userData);
       return { userData };
     }),
   removeUserData: () =>
-    set((state) => {
+    set(() => {
       removeUserDataFromStorage();
       return { userData: null };
     }),
