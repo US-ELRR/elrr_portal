@@ -12,8 +12,8 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
-    "@visx/axis": "^3.0.0-alpha.0",
-    "@visx/gradient": "^3.0.0-alpha.0",
+    "@visx/axis": "^2.12.2",
+    "@visx/gradient": "^2.10.0",
     "@visx/visx": "^2.12.2",
     "autoprefixer": "^10.4.8",
     "axios": "^0.27.2",

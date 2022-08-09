@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { useEffect, useMemo, useState } from 'react';
 
-import Bar from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import axios from 'axios';
 import unstable_batchedUpdates from 'react-dom';
 

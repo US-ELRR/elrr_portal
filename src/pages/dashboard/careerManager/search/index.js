@@ -1,5 +1,5 @@
+import { Tab } from '@headlessui/react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import Tab from '@headlessui/react';
 
 export function Tabs({ tabs }) {
   function classNames(...classes) {
