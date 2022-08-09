@@ -60,42 +60,6 @@ export default function PersonPage() {
             title='Organization Data'
             cols={3}
           />
-
-          <BorderCard title={'Courses'}>
-            <CardData
-              key={'courses'}
-              objArr={userData?.learner?.courses.map((course) => ({
-                //...course,
-                Id: course.courseid,
-                'Course Provider': course.courseprovidername,
-                'Course Name': course.name,
-                'Course Identifier': course.courseidentifier,
-                'Course Level': course.courselevel,
-                'Course Instruction Mode': course.courseinstructionmethod,
-                'Course Department': course.departmentname,
-                'Start Date': course.coursestartdate,
-                'End Date': course.courseenddate,
-                'Enrollment Date': course.courseenrollmentdate,
-              }))}
-              subtitle={'Course'}
-            />
-
-          </BorderCard>
-          <BorderCard title={'Competencies'}>
-            <CardData
-              key={'competencies'}
-              cols={4}
-              objArr={userData?.learner?.competencies.map((competency) => ({
-                // ...competency,
-                Id: competency.competencyid,
-                'Competency Owner': 'Defense Acquisition University',
-                'Framework Name': competency.competencyframeworktitle,
-                'Framework Version': 'v1.0.3',
-              }))}
-              subtitle={'Competency'} />
-
-
-          </BorderCard>
         </div>
       </div>
     </DefaultLayout>
