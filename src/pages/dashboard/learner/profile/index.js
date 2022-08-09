@@ -1,5 +1,4 @@
-import BorderCard from '@/components/BorderCard';
-import CardData from '@/components/learner/CardData';
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
 import useAuthRouter from '@/hooks/useAuthRouter';
