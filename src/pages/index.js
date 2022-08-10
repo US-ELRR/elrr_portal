@@ -3,7 +3,6 @@
 
 import { useEffect, useState } from 'react';
 
-import BrowserTab from '@/components/BrowserTab'
 import DODImage from '@/public/DOD.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Image from 'next/image';
@@ -44,7 +43,6 @@ export default function LoginPage() {
 
   return (
     <>
-      <BrowserTab title={"ELRR Login"} />
       <DefaultLayout>
         <div className='flex flex-col justify-center items-center gap-8'>
           <Image src={DODImage} alt='DOD' width={200} height={200} />
