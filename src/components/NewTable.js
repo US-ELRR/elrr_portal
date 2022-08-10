@@ -6,8 +6,8 @@
  */
 
 export default function NewTable({
-    columnTitles,
     rowsData,
+    columnTitles,
 }) {
     return (
         <div className='px-4 sm:px-6 lg:px-8'>
@@ -21,7 +21,7 @@ export default function NewTable({
                             >
                                 <thead className='bg-gray-50 '>
                                     <tr>
-                                        {columnTitles.map((eachTitle, index) => (
+                                        {columnTitles.length > 0 && columnTitles.map((eachTitle, index) => (
                                             <th
                                                 key={index}
                                                 scope='col'
