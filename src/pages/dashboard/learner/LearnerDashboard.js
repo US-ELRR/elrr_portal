@@ -30,7 +30,7 @@ export default function LearnerDashboard() {
                             ]
                         }
                     ></NewTable>
-                    <Button btnText={"Go to ECC"} link={"https://www.xds.deloitteopenlxp.com"} newTabLink />
+                    <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenlxp.com"} newTabLink />
                 </Card>
             </div>
         </>

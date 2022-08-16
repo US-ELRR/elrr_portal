@@ -2,7 +2,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 
-export default function DropDownButton({ buttonText, items }) {
+export default function DropDownButton({ buttonText, items, handleDownloadClick }) {
     return (
         <div className="rounded-md">
             <Menu as="div" className="relative inline-block text-left">
@@ -27,9 +27,10 @@ export default function DropDownButton({ buttonText, items }) {
                     <Menu.Items className="z-50 absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="p1">
                             {items.map((eachItem) => (
-                                <Menu.Item>
+                                <Menu.Item key={eachItem}>
                                     {({ active }) => (
                                         <button
+                                            onClick={() => handleDownloadClick(eachItem)}
                                             className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
                                                 } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                         >
