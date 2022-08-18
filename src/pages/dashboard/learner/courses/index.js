@@ -7,6 +7,7 @@ import Table from '@/components/common/Table';
 import html2canvas from 'html2canvas';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
+
 const columnTitles = [
   'Course Code',
   'Course Name',
@@ -17,9 +18,20 @@ const columnTitles = [
 const keys = ['courseid', 'name', 'coursestartdate', 'recordstatus'];
 
 export default function CoursesPage() {
-  const [searchField, setSearchField] = useState('')
+  const filterCourses = (courses, query) => {
+    if (!query) { return courses }
+    return courses.filter(course => {
+      const courseName = course.name.toLowerCase()
+      return courseName.includes(query)
+    })
+  }
+
   const router = useAuthRouter();
   const userData = useStore((state) => state.userData);
+  const courses = userData?.learner?.courses
+  const [searchQuery, setSearchQuery] = useState(filteredCourses || '')
+  const filteredCourses = filterCourses(courses, searchQuery)
+
   const printRef = useRef()
 
   const handleClick = (id) => {
@@ -30,6 +42,7 @@ export default function CoursesPage() {
       handleDownloadPDF()
     }
   }
+
   const handleDownloadPDF = async () => {
     const element = printRef.current;
     const canvas = await html2canvas(element);
@@ -44,23 +57,20 @@ export default function CoursesPage() {
     pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
     pdf.save('print.pdf');
   }
-  const handleChange = e => {
-    setSearchField(e.target.value);
-  };
+
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
         Courses Page
       </h1>
       <div className='flex justify-between mt-8'>
-        <Search handleChange={handleChange} />
+        <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <DropDownButton handleDownloadClick={handleDownloadClick} buttonText={'Download'} items={['PDF', 'CSV']} />
       </div>
       <div ref={printRef}
       >
         <Table
-          filterText={searchField}
-          data={userData?.learner?.courses}
+          data={filteredCourses}
           cols={columnTitles}
           keys={keys}
           primaryKey={'courseid'}
