@@ -1,3 +1,4 @@
+import { CSVDownload } from "react-csv";
 import { jsPDF } from 'jspdf';
 import { useRef, useState } from 'react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
@@ -30,6 +31,7 @@ export default function CoursesPage() {
   const userData = useStore((state) => state.userData);
   const courses = userData?.learner?.courses
   const [searchQuery, setSearchQuery] = useState(filteredCourses || '')
+  const [renderCSVDownload, setRenderCSVDownload] = useState(false)
   const filteredCourses = filterCourses(courses, searchQuery)
 
   const printRef = useRef()
@@ -40,6 +42,9 @@ export default function CoursesPage() {
   const handleDownloadClick = (item) => {
     if (item === 'PDF') {
       handleDownloadPDF()
+    }
+    if (item === 'CSV') {
+      handleDownloadCSV()
     }
   }
 
@@ -57,12 +62,15 @@ export default function CoursesPage() {
     pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
     pdf.save('print.pdf');
   }
-
+  const handleDownloadCSV = () => {
+    setRenderCSVDownload(true)
+  }
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
         Courses Page
       </h1>
+      {renderCSVDownload && <CSVDownload data={filteredCourses} target="_blank" />}
       <div className='flex justify-between mt-8'>
         <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <DropDownButton handleDownloadClick={handleDownloadClick} buttonText={'Download'} items={['PDF', 'CSV']} />
