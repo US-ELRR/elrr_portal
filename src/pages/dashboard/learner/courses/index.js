@@ -77,13 +77,15 @@ export default function CoursesPage() {
       </div>
       <div ref={printRef}
       >
-        <Table
-          data={filteredCourses}
-          cols={columnTitles}
-          keys={keys}
-          primaryKey={'courseid'}
-          onClick={handleClick}
-        />
+        {filteredCourses.length > 0 &&
+          <Table
+            data={filteredCourses}
+            cols={columnTitles}
+            keys={keys}
+            primaryKey={'courseid'}
+            onClick={handleClick}
+          />}
+
       </div>
     </DefaultLayout>
   );
