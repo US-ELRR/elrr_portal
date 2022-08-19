@@ -1,7 +1,7 @@
 import { Tab } from '@headlessui/react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 
-export function Tabs({ tabs }) {
+export function CareerManagerSearch({ tabs }) {
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
   }
