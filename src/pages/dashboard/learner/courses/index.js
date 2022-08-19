@@ -30,9 +30,9 @@ export default function CoursesPage() {
   const router = useAuthRouter();
   const userData = useStore((state) => state.userData);
   const courses = userData?.learner?.courses
+  const filteredCourses = filterCourses(courses, searchQuery)
   const [searchQuery, setSearchQuery] = useState(filteredCourses || '')
   const [renderCSVDownload, setRenderCSVDownload] = useState(false)
-  const filteredCourses = filterCourses(courses, searchQuery)
 
   const printRef = useRef()
 
