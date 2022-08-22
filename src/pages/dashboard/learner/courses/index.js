@@ -28,14 +28,14 @@ export default function CoursesPage() {
   const courses = userData?.learner?.courses
 
   const filterCourses = (courses, query) => {
-    if (!query) { return courses }
+    if (query.length < 1) { return courses }
     return courses.filter(course => {
       const courseName = course.name.toLowerCase()
       return courseName.includes(query)
     })
   }
 
-  const filteredCourses = filterCourses(courses, searchQuery)
+  const filteredCourses = filterCourses(courses, searchQuery) || []
   const printRef = useRef()
 
   const handleClick = (id) => {
