@@ -19,6 +19,14 @@ const columnTitles = [
 const keys = ['courseid', 'name', 'coursestartdate', 'recordstatus'];
 
 export default function CoursesPage() {
+
+  const [searchQuery, setSearchQuery] = useState('')
+  const [renderCSVDownload, setRenderCSVDownload] = useState(false)
+
+  const router = useAuthRouter();
+  const userData = useStore((state) => state.userData);
+  const courses = userData?.learner?.courses
+
   const filterCourses = (courses, query) => {
     if (!query) { return courses }
     return courses.filter(course => {
@@ -27,13 +35,7 @@ export default function CoursesPage() {
     })
   }
 
-  const router = useAuthRouter();
-  const userData = useStore((state) => state.userData);
-  const courses = userData?.learner?.courses
   const filteredCourses = filterCourses(courses, searchQuery)
-  const [searchQuery, setSearchQuery] = useState(filteredCourses || '')
-  const [renderCSVDownload, setRenderCSVDownload] = useState(false)
-
   const printRef = useRef()
 
   const handleClick = (id) => {
