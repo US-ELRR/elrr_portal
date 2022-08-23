@@ -8,7 +8,26 @@ on:
   pull_request:
     branches: [ "main" ]
     types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '40 3 * * 3'
 jobs:  
+  eslint:
+    name: Run eslint scanning
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install ESLint
+        run: |
+          npm install
+
+      - name: Run ESLint
+        run: npm run lint
+        continue-on-error: true
   build:
     # requires dependency from step above
     name: Build and push Docker Image
