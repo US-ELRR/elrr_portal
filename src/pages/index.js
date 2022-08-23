@@ -1,7 +1,7 @@
 // intial login page for the app
 // all users must come here first before they can access the app
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import DODImage from '@/public/DOD.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
@@ -12,7 +12,7 @@ import useStore from '@/store/store';
 
 export default function LoginPage() {
   const router = useAuthRouter();
-  const { userData, setUserData } = useStore((state) => state);
+  const { setUserData } = useStore((state) => state);
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -36,10 +36,6 @@ export default function LoginPage() {
       .catch(() => {
       });
   };
-
-  useEffect(() => {
-    if (userData) router.push('/dashboard');
-  }, [userData, router]);
 
   return (
     <>
