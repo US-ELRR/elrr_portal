@@ -11,10 +11,11 @@ export default function useAuthRouter() {
 
   const router = useRouter();
   useEffect(() => {
-    if (!userData?.learner) {
+    if (!userData) {
       router.push('/');
     }
-  }, [userData?.learner, router]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return { isAuthenticated: !!userData, ...router };
 }
