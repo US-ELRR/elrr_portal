@@ -1,7 +1,8 @@
 // intial login page for the app
 // all users must come here first before they can access the app
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 
 import DODImage from '@/public/DOD.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
@@ -12,7 +13,7 @@ import useStore from '@/store/store';
 
 export default function LoginPage() {
   const router = useAuthRouter();
-  const { userData, setUserData } = useStore((state) => state);
+  const { setUserData } = useStore((state) => state);
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -37,9 +38,9 @@ export default function LoginPage() {
       });
   };
 
-  useEffect(() => {
-    if (userData) router.push('/dashboard');
-  }, [userData, router]);
+  // useEffect(() => {
+  //   if (userData) router.push('/dashboard');
+  // },[]);
 
   return (
     <>
@@ -69,12 +70,14 @@ export default function LoginPage() {
             />
           </div>
           <p>Sign-in Using Common Access Card (CAC)</p>
-          <button
-            onClick={handleLogin}
-            className='mt-3 px-6 bg-dod-500 text-white font-bold py-2 rounded hover:bg-dod-300 focus:outline-none  focus:ring-dod-500 focus:shadow-outline-dod focus:ring-2 ring-offset-1'
-          >
-            Login
-          </button>
+          <Link href="/dashboard">
+            <button
+              onClick={handleLogin}
+              className='mt-3 px-6 bg-dod-500 text-white font-bold py-2 rounded hover:bg-dod-300 focus:outline-none  focus:ring-dod-500 focus:shadow-outline-dod focus:ring-2 ring-offset-1'
+            >
+              Login
+            </button>
+          </Link>
           <span className='mt-3 text-gray-500 text-sm font-bold'>
             Trouble logging in? Please contact your IT department
           </span>
