@@ -13,7 +13,6 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { Bar } from 'react-chartjs-2';
 import axios from 'axios';
-import unstable_batchedUpdates from 'react-dom';
 
 ChartJS.register(
   CategoryScale,
@@ -123,16 +122,12 @@ export default function EmploymentCourseScatterPlot({ userId }) {
       axios
         .get(`/api/historical/employment-course-distribution/${userId}`)
         .then((res) => {
-          unstable_batchedUpdates(() => {
-            setData(res.data);
-            setError(null);
-          });
+          setData(res.data);
+          setError(null);
         })
         .catch((err) => {
-          unstable_batchedUpdates(() => {
-            setData([]);
-            setError(err);
-          });
+          setData([]);
+          setError(err);
         });
     }
   }, [userId]);
