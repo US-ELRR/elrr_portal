@@ -43,7 +43,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <DefaultLayout>
+      <DefaultLayout handleLogin={handleLogin}>
         <div className='flex flex-col justify-center items-center gap-8'>
           <Image src={DODImage} alt='DOD' width={200} height={200} />
           <h1 className='text-center text-2xl font-bold text-gray-800'>
