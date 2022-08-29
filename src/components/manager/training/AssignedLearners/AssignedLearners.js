@@ -19,7 +19,7 @@ export default function AssignedLearners({ learners }) {
           learners?.map((learner) => (
             <div
               onClick={() => handleNavigate(learner.personnel.person.personid)}
-              key={learner.name}
+              key={learner.personnel.person.name}
               className='flex items-baseline hover:underline hover:text-dod-100 cursor-pointer gap-1 even:bg-gray-50'
             >
               <div className='w-1/6'>{learner.personnel.person.personid}</div>
