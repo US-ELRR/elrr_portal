@@ -39,8 +39,9 @@ export default function Personnel() {
                 >
                   <thead className='bg-gray-50 '>
                     <tr>
-                      {cols.map((col) => (
+                      {cols.map((col, index) => (
                         <th
+                          key={index}
                           scope='col'
                           className='text-lg sticky top-0 z-10 hidden border-b border-gray-300 bg-gray-50 bg-opacity-75 pl-2 py-2 text-left font-semibold text-gray-900 backdrop-blur backdrop-filter sm:table-cell'
                         >
