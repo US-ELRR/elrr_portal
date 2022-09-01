@@ -22,6 +22,7 @@ const nav_options_career_manager = [
     name: 'Units',
     path: '/dashboard/careerManager/units', // will need to be reactive based on the user type
   },
+
   // {
   //   name: 'Search',
   //   path: '/dashboard/careerManager/search', // will need to be reactive based on the user type
@@ -69,6 +70,7 @@ const training_manager_nav_options = [
     name: 'Personnel',
     path: '/dashboard/trainingManager/personnel', 
   },
+
   // {
   //   name: 'Learners',
   //   path: '/dashboard/trainingManager/learners',

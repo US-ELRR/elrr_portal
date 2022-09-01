@@ -1,8 +1,8 @@
-import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 import Button from '@/components/Button'
 import Card from '@/components/Card';
 import NewTable from '@/components/NewTable';
+import useAuthRouter from '@/hooks/useAuthRouter';
+import useStore from '@/store/store';
 
 export default function TrainingManagerDashboard() {
   const router = useAuthRouter();
