@@ -1,41 +1,30 @@
-import { useEffect, useState } from 'react';
-
+import Accordion from '@/components/Accordion';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
-import axios from 'axios';
+import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
+import useStore from '@/store/store';
 
-export default function CompetenciesPage() {
-  const [competencies, setCompetencies] = useState([]);
-  const keys = ['competencyid', 'competencyframeworktitle', 'recordstatus'];
-  const cols = ['ID', 'Goal', 'Status'];
-  const router = useAuthRouter();
+export default function GoalsPage() {
+    const router = useAuthRouter();
 
-  const handleClick = (id) => {
-    router.push(`/dashboard/trainingManager/competencies/${id}`);
-  };
-
-  useEffect(() => {
-    axios
-      .get('/api/competencies')
-      .then(({ data }) => {
-        setCompetencies(data);
-      })
-      .catch();
-  }, []);
-
-  return (
-    <DefaultLayout>
-      <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
-        Goals Page
-      </h1>
-      <Table
-        data={competencies}
+    const handleClick = (id) => {
+        router.push(`/dashboard/trainingManager/goals/${id}`);
+    };
+    const userData = useStore((state) => state.userData);
+    const keys = ['goalid', 'goalframeworktitle', 'recordstatus'];
+    const cols = ['Goal ID', 'Goal Title', 'Goal Status'];
+    const tabNames = ['Awarded', 'In Progress']
+    const components = [<Table
+        data={userData?.learner?.goals}
         cols={cols}
         keys={keys}
-        primaryKey={'competencyid'}
+        primaryKey={'goalid'}
         onClick={handleClick}
-      />
-    </DefaultLayout>
-  );
+    />, <Accordion></Accordion>]
+    return (
+        <DefaultLayout>
+            <Tabs tabNames={tabNames} components={components} />
+        </DefaultLayout>
+    );
 }
