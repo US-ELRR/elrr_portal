@@ -224,7 +224,7 @@
         "courselrsendpoint": null,
         "coursedescription": null,
         "recordstatus": "ACTIVE",
-        "courselink": ""
+        "courselink": "https://xds.deloitteopenelrr.com"
       },
       {
         "courseid": 110,
@@ -247,7 +247,7 @@
         "courselrsendpoint": null,
         "coursedescription": null,
         "recordstatus": "ACTIVE",
-        "courselink": ""
+        "courselink": "https://xds.deloitteopenelrr.com"
       },
       {
         "courseid": 108,
