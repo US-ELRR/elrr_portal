@@ -19,8 +19,8 @@ const nav_options_career_manager = [
     path: '/dashboard/careerManager/goals', // will need to be reactive based on the user type
   },
   {
-    name: 'Personnel',
-    path: '/dashboard/careerManager/personnel', // will need to be reactive based on the user type
+    name: 'Units',
+    path: '/dashboard/careerManager/units', // will need to be reactive based on the user type
   },
   // {
   //   name: 'Search',

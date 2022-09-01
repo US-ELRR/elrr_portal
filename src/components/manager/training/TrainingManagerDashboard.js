@@ -1,7 +1,3 @@
-import AssignedLearners from './AssignedLearners';
-import Banner from '@/components/manager/common/Banner';
-import CompletedCompetencies from '../common/CompletedCompetencies';
-import EnrolledCourses from '../common/EnrolledCourses';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 import Button from '@/components/Button'

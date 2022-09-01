@@ -9,6 +9,8 @@ import Button from '@/components/Button';
 import Table from '@/components/common/Table';
 import axios from 'axios';
 
+import EmploymentCourseScatterPlot from '@/components/manager/career/EmploymentCourseScatterPlot';
+
 export default function Personnel() {
   const router = useAuthRouter();
   const { userData } = useStore();
@@ -17,14 +19,21 @@ export default function Personnel() {
     return classes.filter(Boolean).join(' ');
   }
 
-  
-  //Top courses
+  const [assignedLearner, setAssignedLearner] = useState({});
+  useEffect(() => {
+    // try to show the first user in the assigned learner list
+    if (userData?.assigned) {
+      setAssignedLearner(userData.assigned[0] || {});
+    }
+  }, [userData?.assigned]);
+
   const columnTitles = [
     'Course Name',
     'Course Provider',
     'Course Status',
   ];
   const keys = ['name', 'courseprovidername', 'recordstatus'];
+
   const courses = userData?.learner?.courses;
   const handleClick = (courselink) => {
     if(courselink){
@@ -32,14 +41,6 @@ export default function Personnel() {
     }
     router.push(`/dashboard/trainingManager/courses/${id}`);
   };
-  const [assignedLearner, setAssignedLearner] = useState({});
-
-  useEffect(() => {
-    // try to show the first user in the assigned learner list
-    if (userData?.assigned) {
-      setAssignedLearner(userData.assigned[0] || {});
-    }
-  }, [userData?.assigned]);
 
   //Top Competencies
   const comTitles = [
@@ -63,13 +64,18 @@ export default function Personnel() {
       .catch();
   }, []);
 
+  
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold bg-gray-300 w-full py-2 text-center'>
         Personnel Page
       </h1>
-      <div className='flex gap-4 my-6 mt-10'>
-          <Card title={"Assigned learners"}>
+
+      <div className='flex gap-4 my-6'>
+        <div className='mt-10 bg-white p-2 rounded shadow w-1/3'>
+          <h2 className='text-2xl font-semibold mb-2 pb-2 px-2 border-b border-b-dod-900/10'>
+            Work Units
+          </h2>
           <div className='flex flex-col gap-2 px-2'>
             {assignedLearner?.personnel &&
               userData?.assigned &&
@@ -89,49 +95,43 @@ export default function Personnel() {
                 </button>
               ))}
           </div>
-          </Card>
-        {/* </div> */}
-        <div className='w-1/3 p-2'>
+        </div>
+        <div className='w-1/3 p-2 mt-6'>
           {assignedLearner && (
             <CompetenciesPieChart
               userId={assignedLearner?.personnel?.person?.personid}
             />
           )}
         </div>
-        <div className='w-1/3 p-2 flex flex-col'>
-          <Card title={"Course Recommendations"}>
-            <NewTable
-                columnTitles={['Title', 'Owner']}
-                rowsData={
-                    [
-                        ["Skill and Roles: Business Skills and Acumen", "Heisenburg"],
-                        ["Facilities Capital Cost of Money", "Brown"]
-                    ]
-                }
-            ></NewTable>
-            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
-          </Card>
+        <div className='mt-10 bg-white p-2  rounded shadow w-1/3'>
+          <div className='w-full'>
+            {assignedLearner && (
+              <EmploymentCourseScatterPlot
+                userId={assignedLearner?.personnel?.person?.personid}
+              />
+            )} 
+          </div>
         </div>
       </div>
-      
-    <Card title={"Top Courses"}>
-        <Table
-            data={courses}
-            cols={columnTitles}
-            keys={keys}
-            primaryKey={'courselink' || "courseid"}
-            onClick={handleClick}
-        />
-    </Card>
 
-    <div className='mt-6'></div>
-    <Card title={"Top Competencies"}>
+    <Card title={"Recommended Competencies and Skills"}>
         <Table
             data={competencies}
             cols={comTitles}
             keys={comKeys}
             primaryKey={'competencyid'}
             onClick={handleCompClick}
+        />
+    </Card>
+
+    <div className='mt-6'></div>
+    <Card title={"Recommended Expereinces"}>
+        <Table
+            data={courses}
+            cols={columnTitles}
+            keys={keys}
+            primaryKey={'courselink' || "courseid"}
+            onClick={handleClick}
         />
     </Card>
 
