@@ -40,7 +40,7 @@ export default function TrainingManagerDashboard() {
                     ]
                 }
             ></NewTable>
-            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenlxp.com"} newTabLink />
+            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
         </Card>
       </div>
     </>

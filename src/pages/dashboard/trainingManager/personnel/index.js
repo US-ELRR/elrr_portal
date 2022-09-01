@@ -21,12 +21,15 @@ export default function Personnel() {
   //Top courses
   const columnTitles = [
     'Course Name',
-    'Owner',
+    'Course Provider',
     'Course Status',
   ];
-  const keys = ['name', 'owner', 'recordstatus'];
+  const keys = ['name', 'courseprovidername', 'recordstatus'];
   const courses = userData?.learner?.courses;
-  const handleClick = (id) => {
+  const handleClick = (courselink) => {
+    if(courselink){
+        router.push(courselink);
+    }
     router.push(`/dashboard/trainingManager/courses/${id}`);
   };
   const [assignedLearner, setAssignedLearner] = useState({});
@@ -60,6 +63,7 @@ export default function Personnel() {
       .catch();
   }, []);
 
+  console.log(courses);
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold bg-gray-300 w-full py-2 text-center'>
@@ -106,7 +110,7 @@ export default function Personnel() {
                     ]
                 }
             ></NewTable>
-            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenlxp.com"} newTabLink />
+            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
           </Card>
         </div>
       </div>
@@ -116,7 +120,7 @@ export default function Personnel() {
             data={courses}
             cols={columnTitles}
             keys={keys}
-            primaryKey={'courseid'}
+            primaryKey={'courselink' || "courseid"}
             onClick={handleClick}
         />
     </Card>
