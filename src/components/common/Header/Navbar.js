@@ -7,14 +7,21 @@ const nav_options_career_manager = [
     path: '/dashboard', // will need to be reactive based on the user type
   },
   {
-    name: 'Personnel',
-    path: '/dashboard/careerManager/personnel', // will need to be reactive based on the user type
+    name: 'Courses',
+    path: '/dashboard/careerManager/courses', // will need to be reactive based on the user type
   },
   {
     name: 'Competencies',
     path: '/dashboard/careerManager/competencies',
   },
-
+  {
+    name: 'Goals',
+    path: '/dashboard/careerManager/goals', // will need to be reactive based on the user type
+  },
+  {
+    name: 'Units',
+    path: '/dashboard/careerManager/units', // will need to be reactive based on the user type
+  },
   // {
   //   name: 'Search',
   //   path: '/dashboard/careerManager/search', // will need to be reactive based on the user type
@@ -55,9 +62,17 @@ const training_manager_nav_options = [
     path: '/dashboard/trainingManager/competencies',
   },
   {
-    name: 'Learners',
-    path: '/dashboard/trainingManager/learners',
+    name: 'Goals',
+    path: '/dashboard/trainingManager/goals', 
   },
+  {
+    name: 'Personnel',
+    path: '/dashboard/trainingManager/personnel', 
+  },
+  // {
+  //   name: 'Learners',
+  //   path: '/dashboard/trainingManager/learners',
+  // },
 ];
 
 const nav_options = {

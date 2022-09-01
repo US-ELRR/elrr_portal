@@ -1,89 +1,43 @@
-import { useEffect, useState } from 'react';
-
-import Banner from '@/components/manager/common/Banner';
-import CompetenciesPieChart from './CompetenciesRadarChart';
-import CompletedCompetencies from '@/components/manager/common/CompletedCompetencies';
-import EmploymentCourseScatterPlot from './EmploymentCourseScatterPlot';
-import EnrolledCourses from '@/components/manager/common/EnrolledCourses';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
+import Button from '@/components/Button'
+import Card from '@/components/Card';
+import NewTable from '@/components/NewTable';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
-export default function CareerManagerDashboard() {
+export default function TrainingManagerDashboard() {
   const router = useAuthRouter();
-
   const userData = useStore((state) => state.userData);
-  const [assignedLearner, setAssignedLearner] = useState({});
+
   const handleNavigate = (course) => {
     router.push(`/dashboard/careerManager/courses/${course.courseid}`);
   };
 
-  useEffect(() => {
-    // try to show the first user in the assigned learner list
-    if (userData?.assigned) {
-      setAssignedLearner(userData.assigned[0] || {});
-    }
-  }, [userData?.assigned]);
-
   return (
     <>
-      <Banner user={userData?.learner.personnel.person} />
-      {/* Chart and user selector */}
-      <div className='flex gap-4 my-6'>
-        <div className='mt-10 bg-white p-2  rounded shadow w-1/2'>
-          <h2 className='text-2xl font-semibold mb-2 pb-2 px-2 border-b border-b-dod-900/10'>
-            Assigned learners
-          </h2>
-          <div className='flex flex-col gap-2 px-2'>
-            {assignedLearner?.personnel &&
-              userData?.assigned &&
-              userData?.assigned.map((learner) => (
-                <button
-                  key={learner.personnel.person.personid}
-                  className={classNames(
-                    `p-2 rounded w-full text-left hover:bg-dod-500/10 focus:outline-dod-100`,
-                    assignedLearner?.personnel?.person?.personid ===
-                    learner.personnel.person.personid && 'bg-gray-50 shadow'
-                  )}
-                  onClick={() => {
-                    setAssignedLearner(learner);
-                  }}
-                >
-                  {learner.personnel.person.name}
-                </button>
-              ))}
-          </div>
-        </div>
-        <div className='w-1/2 p-2 mt-6'>
-          {assignedLearner && (
-            <CompetenciesPieChart
-              userId={assignedLearner?.personnel?.person?.personid}
-            />
-          )}
-        </div>
-      </div>
-      <div className='w-full'>
-        {assignedLearner && (
-          <EmploymentCourseScatterPlot
-            userId={assignedLearner?.personnel?.person?.personid}
-          />
-        )}
-      </div>
-      {/* Enrolled courses */}
-      <div className='grid gap-4 mt-6'>
-        <EnrolledCourses
-          courses={assignedLearner?.courses?.sort(
-            (a, b) => new Date(b.coursestartdate) - new Date(a.coursestartdate)
-          )}
-          handleNavigate={handleNavigate}
-        />
-
-        <CompletedCompetencies
-          completedCompetencies={assignedLearner?.competencies}
-        />
+      {/* <Banner user={userData?.learner.personnel.person} /> */}
+      <div className='flex gap-4 mt-10'>
+        <Card title={"Course Snapshot (Last 30 Days)"}>
+            <NewTable
+                columnTitles={['Course Identifier', 'Course Name', 'Status']}
+                rowsData={
+                  [
+                      ["CLC 103", "Facilities Capital Cost of Money", 'In progress'],
+                      ["CLC 104", "Facilities Capital Cost of Employees", 'Enrolled']
+                  ]
+                }
+            ></NewTable>
+        </Card>
+        <Card title={"Course Recommendations"}>
+            <NewTable
+                columnTitles={['Title', 'Owner']}
+                rowsData={
+                    [
+                        ["Skill and Roles: Business Skills and Acumen", "Heisenburg"]
+                    ]
+                }
+            ></NewTable>
+            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
+        </Card>
       </div>
     </>
   );
