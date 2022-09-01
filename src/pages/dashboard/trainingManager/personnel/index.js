@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
+import Button from '@/components/Button';
+import Card from '@/components/Card';
 import CompetenciesPieChart from '@/components/manager/career/CompetenciesRadarChart';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
-import Card from '@/components/Card';
 import NewTable from '@/components/NewTable';
-import Button from '@/components/Button';
 import Table from '@/components/common/Table';
 import axios from 'axios';
+import useAuthRouter from '@/hooks/useAuthRouter';
+import useStore from '@/store/store';
 
 export default function Personnel() {
   const router = useAuthRouter();
