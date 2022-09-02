@@ -49,7 +49,7 @@ export default function EmploymentCourseScatterPlot({ userId }) {
         stacked: true,
         title: {
           display: true,
-          text: 'Employment Role',
+          text: 'Division',
         },
       },
       y: {
