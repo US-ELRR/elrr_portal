@@ -74,7 +74,6 @@ export default function EmploymentCourseScatterPlot({ userId }) {
 
     // get the avg of the data
 
-    console.log(data);
     // build the chart data
     return {
       labels: data.history.map((item) => item.employment),
