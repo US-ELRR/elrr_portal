@@ -24,7 +24,7 @@
     },
     "history": [
       {
-        "employmentDate": "2012-07-07",
+        "employment": "Army",
         "courses": [
           {
             "status": "ABANDONED"
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "employmentDate": "2013-07-07",
+        "employment": "Navy",
         "courses": [
           {
             "status": "COMPLETED"
@@ -58,7 +58,7 @@
         ]
       },
       {
-        "employmentDate": "2015-07-07",
+        "employment": "Marines",
         "courses": [
           {
             "status": "COMPLETED"
@@ -69,7 +69,7 @@
         ]
       },
       {
-        "employmentDate": "2019-07-07",
+        "employment": "Air Force",
         "courses": [
           {
             "status": "REGISTERED"
@@ -112,7 +112,7 @@
     },
     "history": [
       {
-        "employmentDate": "2012-07-07",
+        "employment": "Army",
         "courses": [
           {
             "status": "ABANDONED"
@@ -129,7 +129,7 @@
         ]
       },
       {
-        "employmentDate": "2018-07-07",
+        "employment": "Navy",
         "courses": [
           {
             "status": "ABANDONED"
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "employmentDate": "2019-07-07",
+        "employment": "Marines",
         "courses": [
           {
             "status": "REGISTERED"
