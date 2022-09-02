@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 
-function MyApp({ Component, pageProps, title = 'DOD' }) {
+function MyApp({ Component, pageProps, title = 'Enterprise Learner Record Repository' }) {
   return (
     <>
       <Head>
