@@ -41,7 +41,7 @@ export default function EmploymentCourseScatterPlot({ userId }) {
       },
       title: {
         display: true,
-        text: 'Distribution of Courses by Status',
+        text: 'Distribution of Personnel by Role',
       },
     },
     scales: {
@@ -49,14 +49,14 @@ export default function EmploymentCourseScatterPlot({ userId }) {
         stacked: true,
         title: {
           display: true,
-          text: 'Employment Date',
+          text: 'Division',
         },
       },
       y: {
         stacked: true,
         title: {
           display: true,
-          text: '# of Courses',
+          text: 'Personnel Count',
         },
         min: 0,
 
@@ -76,10 +76,10 @@ export default function EmploymentCourseScatterPlot({ userId }) {
 
     // build the chart data
     return {
-      labels: data.history.map((item) => item.employmentDate),
+      labels: data.history.map((item) => item.employment),
       datasets: [
         {
-          label: 'Completed',
+          label: 'Active',
           data: data.history.map(
             (item) =>
               item.courses.filter((course) => course.status === 'COMPLETED')
@@ -90,7 +90,7 @@ export default function EmploymentCourseScatterPlot({ userId }) {
           borderWidth: 2,
         },
         {
-          label: 'Registered',
+          label: 'Unassigned',
           data: data.history.map(
             (item) =>
               item.courses.filter((course) => course.status === 'REGISTERED')
@@ -103,7 +103,7 @@ export default function EmploymentCourseScatterPlot({ userId }) {
           borderWidth: 2,
         },
         {
-          label: 'Abandoned',
+          label: 'Inactive',
           data: data.history.map(
             (item) =>
               item.courses.filter((course) => course.status === 'ABANDONED')

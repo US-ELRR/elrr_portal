@@ -9,6 +9,7 @@
   "rules": {
     "no-console": 1,
     "react/jsx-key": "off",
+    "react/no-unknown-property": [0],
     "sort-imports-es6-autofix/sort-imports-es6": [
       2,
       {
