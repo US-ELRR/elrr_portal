@@ -31,7 +31,9 @@ export default function LearnerDashboard() {
                             ]
                         }
                     ></NewTable>
-                    <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenlxp.com"} newTabLink />
+                    <div className='flex justify-end'>
+                        <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
+                    </div>
                 </Card>
             </div>
         </>

@@ -109,7 +109,9 @@ export default function Personnel() {
                     ]
                 }
             ></NewTable>
-            <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
+            <div className='flex justify-end'>
+              <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
+            </div>
           </Card>
         </div>
       </div>
