@@ -66,7 +66,7 @@ export default function Personnel() {
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold bg-gray-300 w-full py-2 text-center'>
-        Personnel Page
+        Units Page
       </h1>
 
       <div className='flex gap-4 my-6'>
@@ -103,7 +103,7 @@ export default function Personnel() {
         </div>
         <div className='mt-10 bg-white p-2  rounded shadow w-1/3'>
           <h2 className='text-2xl font-semibold mb-2 pb-2 px-2 border-b border-b-dod-900/10'>
-            Personnel Snapshot
+            Units Snapshot
           </h2>
           <div className='w-full mt-4'>
             {assignedLearner && (
@@ -126,7 +126,7 @@ export default function Personnel() {
     </Card>
 
     <div className='mt-6'></div>
-    <Card title={"Recommended Expereinces"}>
+    <Card title={"Recommended Experiences"}>
         <Table
             data={courses}
             cols={columnTitles}

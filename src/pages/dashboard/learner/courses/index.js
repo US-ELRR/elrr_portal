@@ -10,13 +10,14 @@ import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 
 const columnTitles = [
-  'Course Code',
-  'Course Name',
-  'Course Start Date',
-  'Course Status',
+  'Course Title',
+  'Course ID',
+  'Course Provider',
+  'Date',
+  'Status',
 ];
 
-const keys = ['courseid', 'name', 'coursestartdate', 'recordstatus'];
+const keys = ['name', 'courseid', 'provider','coursestartdate', 'recordstatus'];
 
 export default function CoursesPage() {
 
@@ -38,8 +39,10 @@ export default function CoursesPage() {
   const filteredCourses = filterCourses(courses, searchQuery) || []
   const printRef = useRef()
 
-  const handleClick = (id) => {
-    router.push(`/dashboard/learner/courses/${id}`);
+  const handleClick = (courselink) => {
+    if(courselink){
+      router.push(courselink);
+    }
   };
   const handleDownloadClick = (item) => {
     if (item === 'PDF') {
@@ -84,7 +87,7 @@ export default function CoursesPage() {
             data={filteredCourses}
             cols={columnTitles}
             keys={keys}
-            primaryKey={'courseid'}
+            primaryKey={'courselink'}
             onClick={handleClick}
           />}
 
