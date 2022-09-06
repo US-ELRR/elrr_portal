@@ -66,7 +66,7 @@ export default function Personnel() {
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold bg-gray-300 w-full py-2 text-center'>
-        Personnel Page
+        Units Page
       </h1>
 
       <div className='flex gap-4 my-6'>
