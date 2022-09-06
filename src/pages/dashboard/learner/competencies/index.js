@@ -47,12 +47,14 @@ export default function CompetenciesPage() {
               >
               <Disclosure.Panel className="p-5 rounded-lg border border-t-0 ml-2 border-gray-300 focus:ring-4 focus:ring-gray-200 focus:bg-gray-50">
                   {goal.title !== "Unassigned Tasks" &&
-                      <>
+                      <div className='flex flex-col'>
                           <div>
-                              Description: {goal.description}
+                            <b>Description:  </b>{goal.description}
                           </div>
-                          Owner:  {goal.owner}
-                      </>
+                          <div>
+                            <b>Owner: </b>{goal.owner}
+                          </div>
+                      </div>
                   }
                   <Table
                     data={goal.compData}
@@ -86,10 +88,6 @@ export default function CompetenciesPage() {
             {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
 
       },
-      {   title: "Self-Selected Tasks",
-          description: "Goal Description",
-          owner: "John Doe"
-      },
   ]
   
   const progressContent = [
@@ -104,10 +102,6 @@ export default function CompetenciesPage() {
         owner: "Open Military Institute",
         compData: [{'competencyframeworktitle':"Innovation in Military Organizations", 'competencyid': "DODCP-MS02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
             {'competencyframeworktitle':"Understanding Military Operations", 'competencyid': "DODCP-MS04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
-    },
-    {   title: "Unassigned Tasks",
-        description: "Goal Description",
-        owner: "John Doe"
     },
   ]
 

@@ -70,9 +70,9 @@ export default function GoalsPage() {
                         {goal.title !== "Self-Directed Tasks" &&
                             <>
                                 <div>
-                                    Description: {goal.description}
+                                    <b>Description: </b>{goal.description}
                                 </div>
-                                Owner:  {goal.owner}
+                                <b>Owner: </b> {goal.owner}
                             </>
                         }
                         <Table
