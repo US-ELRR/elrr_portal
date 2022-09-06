@@ -5,16 +5,16 @@ import trainingManagerData from '@/data/training_manager/trainingManagerData.jso
 
 export default function handler(req, res) {
   const { username } = req.body;
-  if (username.toLowerCase().includes('careermanager')) {
+  if (username.toLowerCase().includes('phillips@us.navy.mil')) {
     return res.status(200).json(careerManagerData);
   }
-  if (username.toLowerCase().includes('trainingmanager')) {
+  if (username.toLowerCase().includes('glass@us.navy.mil')) {
     return res.status(200).json(trainingManagerData);
   }
-  if (username.toLowerCase().includes('learner')) {
+  if (username.toLowerCase().includes('blanchard@us.navy.mil')) {
     return res.status(200).json(learnerData);
   }
-  if (username.toLowerCase().includes('systemadmin')) {
+  if (username.toLowerCase().includes('smith@us.navy.mil')) {
     return res.status(200).json(systemAdminData);
   }
   return res.status(401).json()
