@@ -3,11 +3,8 @@ import Button from '@/components/Button'
 import Card from '@/components/Card';
 import NewTable from '@/components/NewTable';
 import useStore from '@/store/store';
-import useAuthRouter from '@/hooks/useAuthRouter';
-
 
 export default function LearnerDashboard() {
-    const router = useAuthRouter();
     const userData = useStore((state) => state.userData);
     return (
         <>

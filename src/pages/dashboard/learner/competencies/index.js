@@ -1,11 +1,11 @@
+import { ChevronDownIcon } from '@heroicons/react/outline';
+import { Disclosure, Transition } from '@headlessui/react'
 import { useEffect, useState } from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
-import axios from 'axios';
 import Tabs from '@/components/Tabs';
+import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
-import { Disclosure, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline';
 
 export default function CompetenciesPage() {
   const [competencies, setCompetencies] = useState([]);

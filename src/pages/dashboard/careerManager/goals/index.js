@@ -1,11 +1,9 @@
-import Accordion from '@/components/Accordion';
+import { ChevronDownIcon } from '@heroicons/react/outline';
+import { Disclosure, Transition } from '@headlessui/react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
-import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
-import { Disclosure, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline';
 
 export default function GoalsPage() {
     const router = useAuthRouter();
