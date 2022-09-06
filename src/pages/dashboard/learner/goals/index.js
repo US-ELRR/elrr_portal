@@ -15,25 +15,39 @@ export default function GoalsPage() {
     };
     const userData = useStore((state) => state.userData);
     const keys = ['goalid', 'goalframeworktitle', 'recordstatus'];
-    const cols = ['Task ID', 'Task Description', 'Task Status'];
+    const cols = ['Task', 'Task Description', 'Task Status'];
 
     const aboutContent = [
-        {   title: "Goal 1",
-            description: "Goal Description",
-            owner: "John Doe"
+        {   title: "Pre-Award: Plan Solicitation",
+            description: "DoD Contracting Competency Model 1-2022, Job tasks associated with maintaining regulatory compliance during the Pre-Award, Solicitation Development stage of the DoD contracting process.",
+            owner: "DAU",
+            goalsData: [
+                {'goalid':"2.1.1.1", 'goalframeworktitle':"Shape Internal Customer Requirements", 'recordstatus':"Directed"},
+                {'goalid':"2.1.1.2", 'goalframeworktitle':"Conduct Market Research", 'recordstatus':"Directed"},
+                {'goalid':"2.1.1.3", 'goalframeworktitle':"Performed Risk Analysis", 'recordstatus':"Directed"},
+                {'goalid':"2.1.1.4", 'goalframeworktitle':"Formulating Contracting Strategy", 'recordstatus':"Directed"},
+                {'goalid':"2.1.1.5", 'goalframeworktitle':"Finalize Solicitating Plan", 'recordstatus':"Directed"},
+            ]
         },
-        {   title: "Goal 2",
-            description: "Goal Description",
-            owner: "John Doe"
+        {   title: "Pre-Award: Request Offers",
+            description: "DoD Contracting Competency Model 1-2022, Job tasks associated with maintaining regulatory compliance during the Pre-Award, Solicitation Development stage of the DoD contracting process.",
+            owner: "DAU",
+            goalsData: [
+                {'goalid':"2.1.2.1", 'goalframeworktitle':"Execute Solicitation Plan", 'recordstatus':"Directed"},
+                {'goalid':"2.1.2.2", 'goalframeworktitle':"Prepare Solicitations", 'recordstatus':"Directed"},
+                {'goalid':"2.1.2.3", 'goalframeworktitle':"Issue Solicitations", 'recordstatus':"Directed"},
+                {'goalid':"2.1.1.4", 'goalframeworktitle':"Amend Solicitations", 'recordstatus':"Directed"}
+            ]
         },
-        {   title: "Self-Selected Tasks",
+        {   title: "Self-Directed Tasks",
             description: "Goal Description",
-            owner: "John Doe"
-        },
-        {   title: "Unassigned Tasks",
-            description: "Goal Description",
-            owner: "John Doe"
-        },
+            owner: "John Doe",
+            goalsData: [
+                {'goalid':"1", 'goalframeworktitle':"Introduction to Robotics", 'recordstatus':"Explored"},
+                {'goalid':"2", 'goalframeworktitle':"International Studies: Global Issues & Institutions", 'recordstatus':"Curated"},
+                {'goalid':"3", 'goalframeworktitle':"Motivational Interviewing", 'recordstatus':"Recommended"},
+            ]
+        }
     ]
     const panelCode = (content) =>
         content.map((goal, index) => {
@@ -55,7 +69,7 @@ export default function GoalsPage() {
                         leaveTo="transform scale-95 opacity-0"
                     >
                     <Disclosure.Panel className="p-5 rounded-lg border border-t-0 ml-2 border-gray-300 focus:ring-4 focus:ring-gray-200 focus:bg-gray-50">
-                        {goal.title !== "Unassigned Tasks" &&
+                        {goal.title !== "Self-Directed Tasks" &&
                             <>
                                 <div>
                                     Description: {goal.description}
@@ -64,7 +78,7 @@ export default function GoalsPage() {
                             </>
                         }
                         <Table
-                            data={userData?.learner?.goals}
+                            data={goal.goalsData}
                             cols={cols}
                             keys={keys}
                             primaryKey={'goalid'}

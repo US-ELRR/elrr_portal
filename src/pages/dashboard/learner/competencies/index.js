@@ -9,8 +9,8 @@ import { ChevronDownIcon } from '@heroicons/react/outline';
 
 export default function CompetenciesPage() {
   const [competencies, setCompetencies] = useState([]);
-  const keys = ['competencyid', 'competencyframeworktitle', 'recordstatus'];
-  const cols = ['Competency ID', 'Competency Title', 'Competency Status'];
+  const keys = ['competencyframeworktitle','competencyid','provider','recordstatus'];
+  const cols = ['Course Title', 'Course ID', "Coures ID",'Status'];
   const router = useAuthRouter();
 
   const handleClick = (id) => {
@@ -26,7 +26,7 @@ export default function CompetenciesPage() {
       .catch();
   }, []);
 
-const panelCode = (content) =>
+  const panelCode = (content) =>
     content.map((goal, index) => {
         return(
           <Disclosure key={index}>
@@ -55,7 +55,7 @@ const panelCode = (content) =>
                       </>
                   }
                   <Table
-                    data={competencies}
+                    data={goal.compData}
                     cols={cols}
                     keys={keys}
                     primaryKey={'competencyid'}
@@ -69,13 +69,22 @@ const panelCode = (content) =>
     });
 
     const awardedContent = [
-      {   title: "Competency 1",
-          description: "Goal Description",
-          owner: "John Doe"
+      {   title: "Business Skills & Acumen",
+          description: "DoD Contracting Competency Model 1-2022, Managing contracts throughout the contract life cycle while ensuring customer satisfaction",
+          owner: "DAU",
+          compData: [{'competencyframeworktitle':"Customer Focus", 'competencyid': "HBS 408", 'provider':"DAU",'recordstatus':"Inferred"},
+            {'competencyframeworktitle':"Applied Business Analysis Techniques", 'competencyid': "BCF 275V", 'provider':"DAU",'recordstatus':"Inferred"},
+            {'competencyframeworktitle':"Problem Solving for Defense Leaders", 'competencyid': "EXE 4000V", 'provider':"DAU",'recordstatus':"Inferred"},
+            {'competencyframeworktitle':"Stakeholder Management", 'competencyid': "WSM 007", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
       },
-      {   title: "Competency 2",
-          description: "Goal Description",
-          owner: "John Doe"
+      {   title: "General Computer Science Concepts",
+          description: "Version 1.2, Understanding of principles of software engineering and development; part of computer science curriculum.",
+          owner: "Division of IT",
+          compData: [{'competencyframeworktitle':"Introduction to Computer Science: Programming Abstractions", 'competencyid': "DODCP-CS03", 'provider':"DoD Course Provider",'recordstatus':"Inferred"},
+            {'competencyframeworktitle':"Introduction to Computer Science: Programming Paradigms", 'competencyid': "DODCP-CS05", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+            {'competencyframeworktitle':"Ethics and Information Technology", 'competencyid': "DODCP-IT02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+            {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
+
       },
       {   title: "Self-Selected Tasks",
           description: "Goal Description",
@@ -84,13 +93,17 @@ const panelCode = (content) =>
   ]
   
   const progressContent = [
-    {   title: "Competency 1",
-        description: "Goal Description",
-        owner: "John Doe"
+    {   title: "General Contacting Concepts",
+        description: "DoD Contracting Competency Model 1-2022, Fundamentals of contracting that all contract managers must understand and apply ",
+        owner: "DAU",
+        compData: [{'competencyframeworktitle':"Business Essentials", 'competencyid': "BUS 1100", 'provider':"DAU",'recordstatus':"Inferred"},
+            {'competencyframeworktitle':"Supervisory Contracting", 'competencyid': "WSC 109", 'provider':"DAU",'recordstatus':"Inferred"}]
     },
-    {   title: "Self-Selected Tasks",
-        description: "Goal Description",
-        owner: "John Doe"
+    {   title: "Credential: Basic Military Planning",
+        description: "Version 2021-2, Providing learners with an introductory overview of great topics related to military planning.",
+        owner: "Open Military Institute",
+        compData: [{'competencyframeworktitle':"Innovation in Military Organizations", 'competencyid': "DODCP-MS02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+            {'competencyframeworktitle':"Understanding Military Operations", 'competencyid': "DODCP-MS04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
     },
     {   title: "Unassigned Tasks",
         description: "Goal Description",
