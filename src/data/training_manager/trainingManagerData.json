@@ -398,7 +398,7 @@
       "courses": [
         {
           "courseid": 100,
-          "name": "Fundamentals of Systems Acquisition Management",
+          "name": "Fundamentals of Systems Acquisition",
           "owner": "John Doe",
           "coursesubjectmatter": null,
           "coursesubjectabbreviation": null,
@@ -619,7 +619,7 @@
       "courses": [
         {
           "courseid": 100,
-          "name": "Fundamentals of Systems Acquisition Management",
+          "name": "Fundamentals of Systems Acquisition ",
           "owner": "John Doe",
           "coursesubjectmatter": null,
           "coursesubjectabbreviation": null,
@@ -683,7 +683,7 @@
         },
         {
           "courseid": 109,
-          "name": "Department of Defense (DoD) Cyber Awareness Challenge 2021 (1 hr) ",
+          "name": "Department of Defense (DoD) Cyber Awareness",
           "coursesubjectmatter": null,
           "coursesubjectabbreviation": null,
           "courseidentifier": "DOD-US1364-21",

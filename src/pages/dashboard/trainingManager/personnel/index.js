@@ -100,7 +100,7 @@ export default function Personnel() {
         </div>
         <div className='w-1/3 p-2 flex flex-col'>
           <Card title={"Course Recommendations"}>
-            <NewTable
+            {/* <NewTable
                 columnTitles={['Title', 'Owner']}
                 rowsData={
                     [
@@ -108,7 +108,14 @@ export default function Personnel() {
                         ["Facilities Capital Cost of Money", "Brown"]
                     ]
                 }
-            ></NewTable>
+            ></NewTable> */}
+            <Table
+              data={assignedLearner.courses}
+              cols={['Title', 'Owner']}
+              keys={['name', "courseprovidername"]}
+              primaryKey={'courseid'}
+              // onClick={handleClick}
+            />
             <div className='flex justify-end'>
               <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
             </div>
