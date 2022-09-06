@@ -24,6 +24,9 @@ export default function GoalsPage() {
     />, <Accordion></Accordion>]
     return (
         <DefaultLayout>
+            <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
+                Goals Page
+            </h1>
             <Tabs tabNames={tabNames} components={components} />
         </DefaultLayout>
     );
