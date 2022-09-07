@@ -3,7 +3,6 @@ import Button from '@/components/Button';
 import Card from '@/components/Card';
 import CompetenciesPieChart from '@/components/manager/career/CompetenciesRadarChart';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
-import NewTable from '@/components/NewTable';
 import Table from '@/components/common/Table';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
@@ -114,6 +113,7 @@ export default function Personnel() {
               cols={['Title', 'Owner']}
               keys={['name', "courseprovidername"]}
               primaryKey={'courseid'}
+
               // onClick={handleClick}
             />
             <div className='flex justify-end'>
