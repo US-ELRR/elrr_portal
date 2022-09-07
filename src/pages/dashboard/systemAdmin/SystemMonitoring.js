@@ -11,17 +11,17 @@ export default function SystemMonitoring() {
                 </svg></a></Link>
             <div className='flex gap-4 mt-10'>
                 <Card title={'Current ELRR Configuration'}>
-                    <p>Import Frequency: 2 weeks</p>
+                    <p>Import Frequency: 3 days</p>
                     <p>Import Start Time: 00:00 Sunday EST</p>
-                    <p>Endpoints in use:</p>
-                    <p>Last Import Called:</p>
+                    <p>Endpoints in use: Enterprise Course Catalog, TLA CaSS</p>
+                    <p>Last Import Called: 09/07/22</p>
                 </Card>
                 <Card title={'ELRR Snapshot'}>
-                    <p>Current Number of Indexed Enterprise Learner Records: 750,000</p>
-                    <p>Current Number of Unique Learner Profiles: 5,000</p>
-                    <p>Current Number of Unique Learning Activities Referenced: 1,200</p>
-                    <p>Current Number of Competencies Unique Referenced: 75</p>
-                    <p>Number of Errors in Last Import: 15</p>
+                    <p>Current Number of Indexed Enterprise Learner Records: 1,865</p>
+                    <p>Current Number of Unique Learner Profiles: 25</p>
+                    <p>Current Number of Unique Learning Activities Referenced: 2,377</p>
+                    <p>Current Number of Competencies Unique Referenced: 12</p>
+                    <p>Number of Errors in Last Import: 0</p>
                 </Card>
             </div>
         </DefaultLayout>
