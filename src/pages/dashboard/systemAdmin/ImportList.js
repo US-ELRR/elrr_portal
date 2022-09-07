@@ -16,8 +16,14 @@ export default function ImportList() {
                     columnTitles={['Date', 'Total Imports', 'Total Failures', 'Endpoint']}
                     rowsData={
                         [
-                            ["09-09-2009", 5, 5, 'UAM'],
-                            ["09-09-2099", 5, 1, 'DOD']
+                            ["09-07-2022", 840, 1, 'DOD Course Provider'],
+                            ["09-07-2022", 1025, 0, 'DAU'],
+                            ["09-01-2022", 800, 2, 'DOD Course Provider'],
+                            ["09-01-2022", 1050, 2, 'DAU'],
+                            ["08-31-2022", 754, 3, 'DOD Course Provider'],
+                            ["08-31-2022", 975, 3, 'DAU'],
+                            ["08-28-2022", 560, 1, 'DOD Course Provider'],
+                            ["08-28-2022", 860, 1, 'DAU']
                         ]
                     }
                 >
