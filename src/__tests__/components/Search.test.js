@@ -1,5 +1,5 @@
 import Search from "@/components/Search";
-import { act, fireEvent, getByPlaceholderText, render } from "@testing-library/react";
+import { act, fireEvent, render } from "@testing-library/react";
 
 describe("Search Component", () => {
   it("should render the component", () => {
