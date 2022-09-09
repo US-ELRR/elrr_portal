@@ -1,0 +1,17 @@
+import DashboardCard from "@/components/admin/DashboardCard";
+import { render } from "@testing-library/react";
+
+describe("DashboardCard Component", () => {
+    const card = {
+        img: "test img",
+        text: "test text"
+    }
+
+    it("should render the component", () => {
+        const { getByText } = render(
+        <DashboardCard cardFront={card}/>);
+        expect(getByText(/test img/i)).toBeInTheDocument();
+        expect(getByText(/test text/i)).toBeInTheDocument();
+
+    });
+});
