@@ -1,17 +1,10 @@
 import LearnerDashboard from "@/components/learner/LearnerDashboard";
-import { act, fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 describe("LearnerDashboard Component", () => {
     
     it("should render the component", () => {
-        const data = [
-            {
-                id: "123",
-                title: "test title",
-                description: ""
-            }
-        ]
         const { getByText } = render(
             <MemoryRouterProvider>
             <LearnerDashboard />
