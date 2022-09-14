@@ -3,7 +3,11 @@
 module.exports = {
   // dont collect coverage from tailwind.config.js
 
-  collectCoverageFrom: ['<rootDir>/src/**/*.js'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.js',
+    "!<rootDir>/src/pages/api/**/*.js",
+    "!src/store/**"
+  ],
   coveragePathIgnorePatterns: ['<rootDir>/src/pages/_app.js'],
   moduleNameMapper: {
     /* Handle CSS imports (with CSS modules)
