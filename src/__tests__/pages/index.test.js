@@ -1,5 +1,5 @@
 // tests for the index (login) page
-import { render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import LoginPage from '@/pages/index';
 
@@ -23,5 +23,11 @@ describe('index page', () => {
     expect(screen.getByPlaceholderText('username')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('password')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Login' })).toBeInTheDocument();
+    
+    act(() => {
+      fireEvent.change(screen.getByPlaceholderText('username'), { target: { value: 'email@test.com' } });
+      fireEvent.change(screen.getByPlaceholderText('password'), { target: { value: 'password' } });
+      fireEvent.click(screen.getByText("Login"));
+    });
   });
 });

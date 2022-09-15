@@ -10,6 +10,11 @@ describe("Button Component", () => {
     act(() => {
         fireEvent.click(button);
     });
+  });
+
+  it("should render the component if newTabLink blank", () => {
+    const { getByText } = render(<Button btnText={"Test Button"} link={"www.google.com"} newTabLink={""}/>);
+    expect(getByText(/Test Button/i)).toBeInTheDocument();
 
   });
 });

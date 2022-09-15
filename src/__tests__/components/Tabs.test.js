@@ -16,5 +16,9 @@ describe("Tabs Component", () => {
         });
         expect(getByText(/Component2/i)).toBeInTheDocument();
     });
+    
+    it("should render the component with empty parameters", () => {
+        render(<Tabs />);
+    });
 
 });
