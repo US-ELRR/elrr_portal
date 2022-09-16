@@ -16,4 +16,9 @@ describe("DetailsCard Component", () => {
     expect(getByText(/Competency/i)).toBeInTheDocument();
     expect(getByText(/No data to display/i)).toBeInTheDocument();
   });
+
+  it("should render the component if no cols defined", () => {
+    const { getByText } = render(<DetailsCard title='Competency' />);
+    expect(getByText(/Competency/i)).toBeInTheDocument();
+  });
 });
