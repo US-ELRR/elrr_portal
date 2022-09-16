@@ -2,6 +2,9 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import LoginPage from '@/pages/index';
+import axios from 'axios';
+
+jest.mock('axios');
 
 const renderer = () => {
   return render(
@@ -24,10 +27,12 @@ describe('index page', () => {
     expect(screen.getByPlaceholderText('password')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Login' })).toBeInTheDocument();
     
+    axios.post.mockImplementation(() => Promise.resolve({ data: {} }));
     act(() => {
       fireEvent.change(screen.getByPlaceholderText('username'), { target: { value: 'email@test.com' } });
       fireEvent.change(screen.getByPlaceholderText('password'), { target: { value: 'password' } });
       fireEvent.click(screen.getByText("Login"));
     });
+
   });
 });
