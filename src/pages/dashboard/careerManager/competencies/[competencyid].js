@@ -13,7 +13,6 @@ export default function CompetencyPage() {
 
   // fetch the data
   useEffect(() => {
-    if (!competencyid) return;
     axios
       .get(`/api/competencies/${competencyid}`)
       .then((response) => {
