@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { act, fireEvent, render } from "@testing-library/react";
 import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import courseData from '@/data/courseData.json';
@@ -15,6 +15,16 @@ describe("GoalsPage Component", () => {
             </MemoryRouterProvider> );
             
         expect(getByText("Goals Page")).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByText("Goal 1"));
+        });
+        
+        expect(getByText("Complete Profile")).toBeInTheDocument();
+        
+        act(() => {
+            fireEvent.click(getByText("Complete Profile"));
+        });
 
     });
 });

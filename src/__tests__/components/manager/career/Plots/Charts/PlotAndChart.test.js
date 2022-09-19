@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import courseData from '@/data/courseData.json';
@@ -75,8 +75,10 @@ describe("EmploymentCourseScatterPlot Component", () => {
           ]
     }
     it("should render the component", () => {
-        axios.get.mockImplementation(() => Promise.resolve({ data: {employmentData} }));
-        const { getByText } = render(
+        act(() => {
+          axios.get.mockImplementation(() => Promise.resolve({ data: {employmentData} }));
+        });
+          const { getByText } = render(
             <MemoryRouterProvider>
                 <EmploymentCourseScatterPlot userId={"101"} />
             </MemoryRouterProvider> );

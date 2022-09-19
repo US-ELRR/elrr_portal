@@ -1,0 +1,25 @@
+[
+    {
+      "goalid": 100,
+      "goalframeworktitle": "Complete Profile",
+      "goalframeworkversion": null,
+      "goalframeworkidentifier": null,
+      "goalframeworkdescription": null,
+      "goalframeworksubject": null,
+      "goalframeworkvalidstartdate": null,
+      "goalframeworkvalidenddate": null,
+      "goaldefinitionidentifier": null,
+      "goaldefinitionidentifierurl": null,
+      "goaltaxonomyid": null,
+      "goaldefinitionvalidstartdate": null,
+      "goaldefinitionvalideenddate": null,
+      "goaldefinitionparentidentifier": null,
+      "goaldefinitionparenturl": null,
+      "goaldescriptionparentcode": null,
+      "goaldefinitioncode": null,
+      "goaldefinitionstatement": null,
+      "goaldefinitiontypeurl": null,
+      "goaldefinitiontype": null,
+      "recordstatus": "ACTIVE"
+    }
+  ]
