@@ -6,7 +6,6 @@ describe("DropDownButton Component", () => {
     const { getByText } = render(
     <DropDownButton buttonText={"Test Button"} items={["test1", "test2"]} 
         handleDownloadClick={() => {
-            console.log('test'); 
         }}/>);
     expect(getByText(/Test Button/i)).toBeInTheDocument();
     

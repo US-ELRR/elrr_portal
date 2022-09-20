@@ -28,7 +28,6 @@ describe('EnrolledCourses Component', () => {
           { name: 'Math', courseidentifier: 'id_2', coursestartdate:'2020-01-02' },
         ]}
         handleNavigate={() => {
-          console.log('test'); 
         }}
       />
       </MemoryRouterProvider>

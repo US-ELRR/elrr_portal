@@ -3,11 +3,9 @@ import Search from "@/components/Search";
 
 describe("Search Component", () => {
   it("should render the component", () => {
-    const testValue = "testValue"
-    const { getByText, getByPlaceholderText } = render(
+    const { getByPlaceholderText } = render(
     <Search searchQuery={"Test Search"} 
-        setSearchQuery={(testValue) => {
-            console.log(testValue); 
+        setSearchQuery={() => {
         }}/>);
 
         expect(getByPlaceholderText('Search...')).toBeInTheDocument();
