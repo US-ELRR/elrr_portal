@@ -1,8 +1,7 @@
-import useAuthRouter from "@/hooks/useAuthRouter";
-import CompetencyPage from "@/pages/dashboard/learner/competencies/[competencyid]";
-import { render } from "@testing-library/react";
-import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
+import CompetencyPage from "@/pages/dashboard/learner/competencies/[competencyid]";
+import axios from "axios";
 
 jest.mock('axios');
 

@@ -1,9 +1,9 @@
-import { act, render } from "@testing-library/react";
-import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import courseData from '@/data/courseData.json';
-import EmploymentCourseScatterPlot from "@/components/manager/career/EmploymentCourseScatterPlot";
+import { act, render } from "@testing-library/react";
 import CompetenciesRadarChart from "@/components/manager/career/CompetenciesRadarChart";
+import EmploymentCourseScatterPlot from "@/components/manager/career/EmploymentCourseScatterPlot";
+import axios from "axios";
+import courseData from '@/data/courseData.json';
 
 jest.mock('axios');
 

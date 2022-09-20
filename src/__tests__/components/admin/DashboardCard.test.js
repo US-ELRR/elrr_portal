@@ -1,5 +1,5 @@
-import DashboardCard from "@/components/admin/DashboardCard";
 import { render } from "@testing-library/react";
+import DashboardCard from "@/components/admin/DashboardCard";
 
 describe("DashboardCard Component", () => {
     const card = {

@@ -1,6 +1,6 @@
-import CompletedCompetencies from '@/components/learner/common/CompletedCompetencies';
-import { act, fireEvent, render } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from '@testing-library/react';
+import CompletedCompetencies from '@/components/learner/common/CompletedCompetencies';
 
 describe('CompletedCompetencies Learner Component', () => {
   it('should render the component', () => {

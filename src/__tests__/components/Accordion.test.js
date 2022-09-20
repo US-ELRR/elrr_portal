@@ -1,5 +1,5 @@
-import Accordion from "@/components/Accordion";
 import { act, fireEvent, render } from "@testing-library/react";
+import Accordion from "@/components/Accordion";
 
 describe("Accordion Component", () => {
   it("should render the component", () => {

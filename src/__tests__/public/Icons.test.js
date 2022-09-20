@@ -1,8 +1,8 @@
+import { render } from "@testing-library/react";
 import DocumentActiveIcon from "@/public/icons/DocumentActiveIcon";
 import DocumentInactiveIcon from "@/public/icons/DocumentInactiveIcon";
 import EditActiveIcon from "@/public/icons/EditActiveIcon";
 import EditInactiveIcon from "@/public/icons/EditInactiveIcon";
-import { render } from "@testing-library/react";
 
 describe("Icon Components", () => {
     

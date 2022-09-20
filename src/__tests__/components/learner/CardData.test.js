@@ -1,5 +1,5 @@
-import CardData from "@/components/learner/CardData";
 import { render } from "@testing-library/react";
+import CardData from "@/components/learner/CardData";
 
 describe("CardData Component", () => {
 

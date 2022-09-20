@@ -1,7 +1,7 @@
-import { act, fireEvent, render } from "@testing-library/react";
-import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
 import CoursePage from "@/pages/dashboard/careerManager/courses/[courseid]";
+import axios from "axios";
 
 jest.mock('axios');
 
@@ -27,6 +27,7 @@ describe("CoursePage Component", () => {
             </MemoryRouterProvider> );
 
         expect(getByText("Course Details")).toBeInTheDocument();
+
         // expect(screen.getByText("test title")).toBeInTheDocument();
 
     });

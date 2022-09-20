@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
 import UserProfileManagement from "@/pages/dashboard/systemAdmin/UserProfileManagement";
 
 describe("UserProfileManagement Component", () => {

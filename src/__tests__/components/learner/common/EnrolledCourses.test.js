@@ -1,6 +1,6 @@
-import EnrolledCourses from '@/components/learner/common/EnrolledCourses';
-import { act, fireEvent, render } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from '@testing-library/react';
+import EnrolledCourses from '@/components/learner/common/EnrolledCourses';
 
 describe('EnrolledCourses Component', () => {
   it('should render the component', () => {

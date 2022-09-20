@@ -1,6 +1,6 @@
-import Dashboard from "@/pages/dashboard";
-import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
+import Dashboard from "@/pages/dashboard";
 
 describe("Dashboard Component", () => {
     

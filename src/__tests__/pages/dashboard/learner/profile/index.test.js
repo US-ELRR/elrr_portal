@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
 import PersonPage from "@/pages/dashboard/learner/profile";
 
 describe("PersonPage Component", () => {

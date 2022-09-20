@@ -1,6 +1,6 @@
-import NavBtn from "@/components/common/Header/NavBtn";
-import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from "@testing-library/react";
+import NavBtn from "@/components/common/Header/NavBtn";
 
 
 describe("NavBtn Component", () => {

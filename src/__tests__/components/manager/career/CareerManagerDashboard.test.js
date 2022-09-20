@@ -1,6 +1,6 @@
-import CareerManagerDashboard from "@/components/manager/career/CareerManagerDashboard";
-import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
+import CareerManagerDashboard from "@/components/manager/career/CareerManagerDashboard";
 
 describe("CareerManagerDashboard Component", () => {
     

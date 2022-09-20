@@ -1,5 +1,5 @@
-import DetailsCard from "@/components/common/DetailsCard";
 import { render } from "@testing-library/react";
+import DetailsCard from "@/components/common/DetailsCard";
 
 describe("DetailsCard Component", () => {
     

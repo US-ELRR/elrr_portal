@@ -1,5 +1,5 @@
-import { act, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, render } from "@testing-library/react";
 import PersonPage from "@/pages/dashboard/trainingManager/personnel/[personid]";
 import axios from "axios";
 

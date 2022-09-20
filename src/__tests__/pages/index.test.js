@@ -1,6 +1,6 @@
 // tests for the index (login) page
-import { act, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from '@testing-library/react';
 import LoginPage from '@/pages/index';
 import axios from 'axios';
 

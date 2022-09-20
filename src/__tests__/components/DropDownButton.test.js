@@ -1,5 +1,5 @@
-import DropDownButton from "@/components/DropDownButton";
 import { act, fireEvent, render } from "@testing-library/react";
+import DropDownButton from "@/components/DropDownButton";
 
 describe("DropDownButton Component", () => {
   it("should render the component", () => {

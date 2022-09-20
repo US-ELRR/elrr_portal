@@ -1,5 +1,5 @@
-import Tabs from "@/components/Tabs";
 import { act, fireEvent, render } from "@testing-library/react";
+import Tabs from "@/components/Tabs";
 
 describe("Tabs Component", () => {
     

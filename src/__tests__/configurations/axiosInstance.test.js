@@ -1,7 +1,6 @@
+import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import { render } from "@testing-library/react";
 import axios from "axios";
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import axiosInstance from "@/configurations/axiosInsance";
 
 jest.mock('axios');
 

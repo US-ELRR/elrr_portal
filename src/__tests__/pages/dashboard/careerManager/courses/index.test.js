@@ -1,7 +1,7 @@
-import CoursesPage from "@/pages/dashboard/careerManager/courses";
-import { act, fireEvent, render } from "@testing-library/react";
-import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from "@testing-library/react";
+import CoursesPage from "@/pages/dashboard/careerManager/courses";
+import axios from "axios";
 
 jest.mock('axios');
 

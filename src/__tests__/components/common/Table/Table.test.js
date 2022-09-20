@@ -1,5 +1,5 @@
-import Table from "@/components/common/Table";
 import { act, fireEvent, render } from "@testing-library/react";
+import Table from "@/components/common/Table";
 
 describe("Table Component", () => {
     

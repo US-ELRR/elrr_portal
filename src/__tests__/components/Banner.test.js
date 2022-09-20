@@ -1,5 +1,5 @@
-import Banner from "@/components/Banner";
 import { render } from "@testing-library/react";
+import Banner from "@/components/Banner";
 
 describe("Banner Component", () => {
   it("should render the component", () => {

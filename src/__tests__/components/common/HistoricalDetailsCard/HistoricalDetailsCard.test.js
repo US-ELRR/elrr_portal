@@ -1,5 +1,5 @@
-import HistoricalDetailsCard from "@/components/common/HistoricalDetailsCard";
 import { render } from "@testing-library/react";
+import HistoricalDetailsCard from "@/components/common/HistoricalDetailsCard";
 
 describe("HistoricalDetailsCard Component", () => {
   it("should render the component", () => {

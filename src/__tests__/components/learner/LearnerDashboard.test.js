@@ -1,6 +1,6 @@
-import LearnerDashboard from "@/components/learner/LearnerDashboard";
-import { render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { render } from "@testing-library/react";
+import LearnerDashboard from "@/components/learner/LearnerDashboard";
 
 describe("LearnerDashboard Component", () => {
     

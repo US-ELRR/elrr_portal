@@ -1,8 +1,8 @@
-import { act, fireEvent, render } from "@testing-library/react";
-import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-import courseData from '@/data/courseData.json';
+import { act, fireEvent, render } from "@testing-library/react";
 import GoalsPage from "@/pages/dashboard/trainingManager/goals";
+import axios from "axios";
+import courseData from '@/data/courseData.json';
 
 jest.mock('axios');
 

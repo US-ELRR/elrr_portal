@@ -1,5 +1,5 @@
-import NewTable from "@/components/NewTable";
 import { render } from "@testing-library/react";
+import NewTable from "@/components/NewTable";
 
 describe("NewTable Component", () => {
     

@@ -1,6 +1,6 @@
-import AssignedLearners from "@/components/manager/training/AssignedLearners";
-import { act, fireEvent, render } from "@testing-library/react";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+import { act, fireEvent, render } from "@testing-library/react";
+import AssignedLearners from "@/components/manager/training/AssignedLearners";
 
 describe("AssignedLearners Component", () => {
     

@@ -1,5 +1,5 @@
-import SystemAdminDashboard from "@/components/admin/SystemAdminDashboard";
 import { render } from "@testing-library/react";
+import SystemAdminDashboard from "@/components/admin/SystemAdminDashboard";
 
 describe("SystemAdminDashboard Component", () => {
 
