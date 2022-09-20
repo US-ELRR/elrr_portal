@@ -13,7 +13,6 @@ export default function GoalsPage() {
 
   // fetch the data
   useEffect(() => {
-    if (!goalid) return;
     axios
       .get(`/api/goals/${goalid}`)
       .then((response) => {

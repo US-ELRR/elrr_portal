@@ -6,7 +6,8 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.js',
     "!<rootDir>/src/pages/api/**/*.js",
-    "!src/store/**"
+    "!src/store/**",
+    "!<rootDir>/src/components/manager/career/CompetenciesRadarChart/**.js"
   ],
   coveragePathIgnorePatterns: ['<rootDir>/src/pages/_app.js'],
   moduleNameMapper: {
