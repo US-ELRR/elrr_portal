@@ -1,5 +1,5 @@
 import useAuthRouter from "@/hooks/useAuthRouter";
-import CompetenciesPage from "@/pages/dashboard/learner/competencies/[competencyid]";
+import CompetencyPage from "@/pages/dashboard/learner/competencies/[competencyid]";
 import { render } from "@testing-library/react";
 import axios from "axios";
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
@@ -18,13 +18,12 @@ jest.mock('next/router', () => ({
 describe("CompetenciesPage Component", () => {
     const competency = {
         competencyframeworktitle: "test title",
-
     }
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {competency} }));
         const { getByText, getAllByText } = render(
             <MemoryRouterProvider>
-                <CompetenciesPage />
+                <CompetencyPage />
             </MemoryRouterProvider> );
             
         expect(getByText("Enterprise Learner Record Repository")).toBeInTheDocument();

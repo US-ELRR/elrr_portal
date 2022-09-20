@@ -17,8 +17,7 @@ jest.mock('next/router', () => ({
 
 describe("CompetencyPage Component", () => {
     const competency = {
-        competencyframeworktitle: "test title",
-
+        competencyframeworktitle: "test title"
     }
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {competency} }));
