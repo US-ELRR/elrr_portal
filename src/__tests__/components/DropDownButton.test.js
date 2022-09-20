@@ -18,6 +18,8 @@ describe("DropDownButton Component", () => {
     expect(getByText(/test1/i)).toBeInTheDocument();
     expect(getByText(/test2/i)).toBeInTheDocument();
     const dropDownButton = getByText('test1');
+    dropDownButton.focus();
+    fireEvent.mouseOver(dropDownButton);
     act(() => {
         fireEvent.click(dropDownButton);
     });
