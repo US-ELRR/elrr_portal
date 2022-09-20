@@ -20,7 +20,7 @@ describe("GoalPage Component", () => {
     }
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {goal} }));
-        const { getByText, getAllByText } = render(
+        const { getByText } = render(
             <MemoryRouterProvider>
                 <GoalsPage />
             </MemoryRouterProvider> );

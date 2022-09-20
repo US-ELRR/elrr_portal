@@ -78,25 +78,19 @@ describe("EmploymentCourseScatterPlot Component", () => {
         act(() => {
           axios.get.mockImplementation(() => Promise.resolve({ data: {employmentData} }));
         });
-          const { getByText } = render(
+          render(
             <MemoryRouterProvider>
                 <EmploymentCourseScatterPlot userId={"101"} />
             </MemoryRouterProvider> );
-            
-        // expect(getByText("Goals Page")).toBeInTheDocument();
-
     });
 });
 
 describe("CompetenciesRadarChart Component", () => {
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {courseData} }));
-        const { getByText } = render(
+        render(
             <MemoryRouterProvider>
                 <CompetenciesRadarChart userId={"101"} />
             </MemoryRouterProvider> );
-            
-        // expect(getByText("Goals Page")).toBeInTheDocument();
-
     });
 });

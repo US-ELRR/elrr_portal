@@ -14,7 +14,7 @@ describe("CompetenciesPage Component", () => {
     ]
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {competencies} }));
-        const { getByText, getAllByText } = render(
+        const { getByText } = render(
             <MemoryRouterProvider>
                 <CompetenciesPage />
             </MemoryRouterProvider> );

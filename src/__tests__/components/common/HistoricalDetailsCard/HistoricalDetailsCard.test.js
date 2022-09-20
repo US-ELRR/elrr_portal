@@ -12,7 +12,7 @@ describe("HistoricalDetailsCard Component", () => {
   });
 
   it("empty objArray ", () => {
-    const { getByText, getAllByText } = render(
+    const { getByText } = render(
     <HistoricalDetailsCard title={"Test title"} subtitle={"Test Subtitle"} objArr={[ ]} cols={2}/>
     );
     expect(getByText(/Test title/i)).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe("HistoricalDetailsCard Component", () => {
   });
 
   it("empty cols parameter ", () => {
-    const { getByText, getAllByText } = render(
+    const { getByText } = render(
     <HistoricalDetailsCard title={"Test title"} subtitle={"Test Subtitle"} objArr={[[], ]} />
     );
     expect(getByText(/Test title/i)).toBeInTheDocument();

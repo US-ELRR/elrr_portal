@@ -3,7 +3,6 @@ import { Disclosure, Transition } from '@headlessui/react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
 import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 
 export default function GoalsPage() {
     const router = useAuthRouter();
@@ -11,7 +10,6 @@ export default function GoalsPage() {
     const handleClick = (id) => {
         router.push(`/dashboard/careerManager/goals/${id}`);
     };
-    const userData = useStore((state) => state.userData);
     const keys = ['goalid', 'goalframeworktitle', 'recordstatus'];
     const cols = ['Task ID', 'Task Description', 'Task Status'];
 
