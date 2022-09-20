@@ -3,9 +3,8 @@ import BorderCard from "@/components/BorderCard";
 
 describe("BorderCard Component", () => {
   it("should render the component", () => {
-    const { getByText } = render(<BorderCard title={"Test title"} children={"Child Test"}/>);
+    const { getByText } = render(<BorderCard title={"Test title"} />);
     expect(getByText(/Test title/i)).toBeInTheDocument();
-    expect(getByText(/Child Test/i)).toBeInTheDocument();
 
   });
 });

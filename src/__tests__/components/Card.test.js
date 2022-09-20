@@ -3,9 +3,8 @@ import Card from "@/components/Card";
 
 describe("Card Component", () => {
   it("should render the component", () => {
-    const { getByText } = render(<Card title={"Test title"} children={"Child Test"}/>);
+    const { getByText } = render(<Card title={"Test title"} />);
     expect(getByText(/Test title/i)).toBeInTheDocument();
-    expect(getByText(/Child Test/i)).toBeInTheDocument();
 
   });
 });
