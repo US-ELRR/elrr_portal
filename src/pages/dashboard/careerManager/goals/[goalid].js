@@ -5,7 +5,7 @@ import DetailsCard from '@/components/common/DetailsCard';
 import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 
-export default function CompetencyPage() {
+export default function GoalsPage() {
   const [goal, setGoal] = useState({});
   const {
     query: { goalid },
@@ -13,7 +13,6 @@ export default function CompetencyPage() {
 
   // fetch the data
   useEffect(() => {
-    if (!goalid) return;
     axios
       .get(`/api/goals/${goalid}`)
       .then((response) => {

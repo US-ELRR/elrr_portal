@@ -1,16 +1,8 @@
 import Button from '@/components/Button'
 import Card from '@/components/Card';
 import NewTable from '@/components/NewTable';
-import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 
-export default function TrainingManagerDashboard() {
-  const router = useAuthRouter();
-  const userData = useStore((state) => state.userData);
-
-  const handleNavigate = (course) => {
-    router.push(`/dashboard/careerManager/courses/${course.courseid}`);
-  };
+export default function CareerManagerDashboard() {
 
   return (
     <>

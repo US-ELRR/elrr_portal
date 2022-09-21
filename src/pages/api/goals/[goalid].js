@@ -1,20 +1,20 @@
-import competenciesData from '@/data/competenciesData.json';
+import goalsData from '@/data/goalsData.json';
 
 export default function handler(req, res) {
-    // Get the competency id from the request
-    const competencyid = req.query.competencyid;
+    // Get the goal id from the request
+    const goalid = req.query.goalid;
 
-    // find the competency in the data
-    const competency = competenciesData.find(
-        (competency) => competency.competencyid == competencyid
+    // find the goal in the data
+    const goal = goalsData.find(
+        (goal) => goal.goalid == goalid
     );
 
-    // if the competency is not found, return 404
-    if (!competency) {
+    // if the goal is not found, return 404
+    if (!goal) {
         res.status(404).json({
-            error: 'Competency not found',
+            error: 'Goal not found',
         });
         return;
     }
-    res.status(200).json(competency || {});
+    res.status(200).json(goal || {});
 }

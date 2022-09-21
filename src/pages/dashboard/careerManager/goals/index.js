@@ -3,7 +3,6 @@ import { Disclosure, Transition } from '@headlessui/react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
 import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 
 export default function GoalsPage() {
     const router = useAuthRouter();
@@ -11,28 +10,39 @@ export default function GoalsPage() {
     const handleClick = (id) => {
         router.push(`/dashboard/careerManager/goals/${id}`);
     };
-    const userData = useStore((state) => state.userData);
     const keys = ['goalid', 'goalframeworktitle', 'recordstatus'];
     const cols = ['Task ID', 'Task Description', 'Task Status'];
 
     const aboutContent = [
         {   title: "Goal 1",
             description: "Goal Description",
-            owner: "John Doe"
+            owner: "John Doe",
+            goalsData: [
+                {'goalid':"100", 'goalframeworktitle':"Complete Profile", 'recordstatus':"Active"},
+            ]
         },
         {   title: "Goal 2",
             description: "Goal Description",
-            owner: "John Doe"
+            owner: "John Doe",
+            goalsData: [
+                {'goalid':"100", 'goalframeworktitle':"Complete Profile", 'recordstatus':"Active"},
+            ]
         },
         {   title: "Self-Selected Tasks",
             description: "Goal Description",
-            owner: "John Doe"
+            owner: "John Doe",
+            goalsData: [
+                {'goalid':"100", 'goalframeworktitle':"Complete Profile", 'recordstatus':"Active"},
+            ]
         },
         {   title: "Unassigned Tasks",
             description: "Goal Description",
-            owner: "John Doe"
+            owner: "John Doe",
+            goalsData: [
+            ]
         },
     ]
+    
     const panelCode = (content) =>
         content.map((goal, index) => {
             return(
@@ -62,7 +72,7 @@ export default function GoalsPage() {
                             </>
                         }
                         <Table
-                            data={userData?.learner?.goals}
+                            data={goal.goalsData}
                             cols={cols}
                             keys={keys}
                             primaryKey={'goalid'}

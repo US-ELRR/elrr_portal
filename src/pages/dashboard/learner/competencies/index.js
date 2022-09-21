@@ -1,14 +1,11 @@
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import { Disclosure, Transition } from '@headlessui/react'
-import { useEffect, useState } from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
 import Tabs from '@/components/Tabs';
-import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
 
 export default function CompetenciesPage() {
-  const [competencies, setCompetencies] = useState([]);
   const keys = ['competencyframeworktitle','competencyid','provider','recordstatus'];
   const cols = ['Course Title', 'Course ID', "Coures ID",'Status'];
   const router = useAuthRouter();
@@ -17,23 +14,14 @@ export default function CompetenciesPage() {
     router.push(`/dashboard/learner/competencies/${id}`);
   };
 
-  useEffect(() => {
-    axios
-      .get('/api/competencies')
-      .then(({ data }) => {
-        setCompetencies(data);
-      })
-      .catch();
-  }, []);
-
   const panelCode = (content) =>
-    content.map((goal, index) => {
+    content.map((competency, index) => {
         return(
           <Disclosure key={index}>
             {({ open }) => (
             <div className='p-2 hover:bg-gray-200 hover:rounded-lg'>
               <Disclosure.Button className="flex items-center rounded-lg justify-between text-left w-full p-5 font-medium border bg-dod-300 text-white border-gray-300 hover:opacity-90 hover:shadow ">
-                  {goal.title}
+                  {competency.title}
                   <ChevronDownIcon className={`w-6 h-6 ${open ? "transform rotate-180" : ""} `} />
               </Disclosure.Button>
 
@@ -46,18 +34,18 @@ export default function CompetenciesPage() {
                   leaveTo="transform scale-95 opacity-0"
               >
               <Disclosure.Panel className="p-5 rounded-lg border border-t-0 ml-2 border-gray-300 focus:ring-4 focus:ring-gray-200 focus:bg-gray-50">
-                  {goal.title !== "Unassigned Tasks" &&
+                  {competency.title !== "Unassigned Tasks" &&
                       <div className='flex flex-col'>
                           <div>
-                            <b>Description:  </b>{goal.description}
+                            <b>Description:  </b>{competency.description}
                           </div>
                           <div>
-                            <b>Owner: </b>{goal.owner}
+                            <b>Owner: </b>{competency.owner}
                           </div>
                       </div>
                   }
                   <Table
-                    data={goal.compData}
+                    data={competency.compData}
                     cols={cols}
                     keys={keys}
                     primaryKey={'competencyid'}

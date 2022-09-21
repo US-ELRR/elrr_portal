@@ -13,15 +13,21 @@ describe('LoggedInNavbar Component', () => {
   it('should render the component with Career Manager navigation', () => {
     const { getByText } = render(
       <Navbar
-        userData={{ user: { name: 'Test user' }, type: 'CareerManager' }}
+        userData={{ 
+          role:'career_manager',
+          learner:
+            {personnel:
+              {person:
+                { name: 'Test user' } 
+              }
+            }
+        }}
       />
     );
     expect(getByText(/Test user/i)).toBeInTheDocument();
-    expect(getByText(/CareerManager/i)).toBeInTheDocument();
-    expect(getByText(/Dashboard/i)).toBeInTheDocument();
-    expect(getByText(/Personnel/i)).toBeInTheDocument();
-    expect(getByText(/Competencies/i)).toBeInTheDocument();
-    expect(getByText(/Search/i)).toBeInTheDocument();
+    expect(getByText(/career_manager/i)).toBeInTheDocument();
+    expect(getByText(/Logout/i)).toBeInTheDocument();
+
   });
 
   it('should render the login nav bar', () => {

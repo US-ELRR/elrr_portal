@@ -14,14 +14,12 @@ export default function CoursePage() {
 
   // on mount retrieve course data
   useEffect(() => {
-    if (courseid) {
-      axios
-        .get(`/api/courses/${courseid}`)
-        .then((res) => {
-          setCourse(res.data);
-        })
-        .catch();
-    }
+    axios
+      .get(`/api/courses/${courseid}`)
+      .then((res) => {
+        setCourse(res.data);
+      })
+      .catch();
   }, [courseid]);
 
   return (
