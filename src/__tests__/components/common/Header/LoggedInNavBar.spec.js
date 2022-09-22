@@ -1,6 +1,6 @@
-import Navbar from '@/components/common/Header/Navbar';
 import { render } from '@testing-library/react';
 import { useRouter } from 'next/router';
+import Navbar from '@/components/common/Header/Navbar';
 
 jest.mock('next/router', () => ({
   useRouter: jest.fn(),
