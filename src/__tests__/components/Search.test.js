@@ -6,6 +6,7 @@ describe("Search Component", () => {
     const { getByPlaceholderText } = render(
     <Search searchQuery={"Test Search"} 
         setSearchQuery={() => {
+          console.log("clicked");
         }}/>);
 
         expect(getByPlaceholderText('Search...')).toBeInTheDocument();
