@@ -6,11 +6,6 @@ import courseData from '@/data/courseData.json';
 
 jest.mock('axios');
 
-// const realUseState = React.useState
-// jest
-//   .spyOn(React, 'useState')
-//   .mockImplementationOnce(() => realUseState(CareerUserData))
-
 describe("Personnel Component", () => {
     it("should render the component", () => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {courseData} }));

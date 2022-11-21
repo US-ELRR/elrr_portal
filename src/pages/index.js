@@ -39,10 +39,6 @@ export default function LoginPage() {
       });
   };
 
-  // useEffect(() => {
-  //   if (userData) router.push('/dashboard');
-  // },[]);
-
   return (
     <>
       <DefaultLayout handleLogin={handleLogin}>

@@ -27,8 +27,5 @@ describe("CoursePage Component", () => {
             </MemoryRouterProvider> );
 
         expect(getByText("Course Details")).toBeInTheDocument();
-
-        // expect(screen.getByText("test title")).toBeInTheDocument();
-
     });
 });
