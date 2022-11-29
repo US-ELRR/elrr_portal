@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watchAll --coverage",
-    "lint": "next lint"
+    "test": "jest --watchAll",
+    "lint": "next lint",
+    "coverage": "jest --watchAll --coverage --verbose --noStackTrace --silent --maxWorkers=50%"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
@@ -18,6 +19,7 @@
     "autoprefixer": "^10.4.8",
     "axios": "^0.27.2",
     "chart.js": "^3.9.1",
+    "d3-color": "3.1.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "next": "12.2.4",
