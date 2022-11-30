@@ -35,12 +35,9 @@ export default function LoginPage() {
         router.push('/dashboard');
       })
       .catch(() => {
+        console.log("Error");
       });
   };
-
-  // useEffect(() => {
-  //   if (userData) router.push('/dashboard');
-  // },[]);
 
   return (
     <>

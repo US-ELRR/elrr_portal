@@ -37,14 +37,14 @@ export default function NewTable({
                                 </thead>
                                 <tbody className='bg-white text-left '>
                                     {rowsData?.length > 0 &&
-                                        rowsData.map((row, index) => {
+                                        rowsData.map((row, rindex) => {
                                             return (
                                                 <tr
-                                                    key={index}
+                                                    key={rindex}
                                                     className=' even:bg-gray-50 group'
                                                 >
-                                                    {row.map((eachItem, index) => (
-                                                        <td key={index} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 '>
+                                                    {row.map((eachItem, rindex) => (
+                                                        <td key={rindex} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 '>
                                                             {eachItem || '-'}
                                                         </td>
                                                     ))}

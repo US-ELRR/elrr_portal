@@ -5,33 +5,42 @@ import axios from "axios";
 
 jest.mock('axios');
 
-describe("CompetenciesPage Component", () => {
+describe("CompetenciesPage Component", () => { 
     const competencies = [
         {
           "competencyid": 100,
           "competencyframeworktitle": "Skill and Roles: Business Skills and Acumen",
         },
     ]
-    it("should render the component", () => {
+    it("should render the component", async() => {
         axios.get.mockImplementation(() => Promise.resolve({ data: {competencies} }));
-        const { getByText } = render(
+        
+        let screen;
+        await act(async () => {
+            screen = render(
             <MemoryRouterProvider>
                 <CompetenciesPage />
             </MemoryRouterProvider> );
+        });
             
-        expect(getByText("Competencies Page")).toBeInTheDocument();
-        expect(getByText("Awarded")).toBeInTheDocument();
-        expect(getByText("In Progress")).toBeInTheDocument();
-        expect(getByText("Business Skills & Acumen")).toBeInTheDocument();
-
-        axios.get.mockImplementation(() => Promise.resolve({ data: {competencies} }));
-        let button = getByText('In Progress');
+        expect(screen.getByText("Competencies Page")).toBeInTheDocument();
+        expect(screen.getByText("Awarded")).toBeInTheDocument();
+        expect(screen.getByText("In Progress")).toBeInTheDocument();
+        expect(screen.getByText("Business Skills & Acumen")).toBeInTheDocument();
+        
+        let button = screen.getByText('Business Skills & Acumen');
         act(() => {
             fireEvent.click(button);
         });
-        expect(getByText(/General Contacting Concepts/i)).toBeInTheDocument();
 
-        button = getByText('General Contacting Concepts');
+        expect(screen.getByText(/Customer Focus/i)).toBeInTheDocument();
+        button = screen.getByText('Customer Focus');
+        act(() => {
+            fireEvent.click(button);
+        });
+
+        axios.get.mockImplementation(() => Promise.resolve({ data: {competencies} }));
+        button = screen.getByText('In Progress');
         act(() => {
             fireEvent.click(button);
         });

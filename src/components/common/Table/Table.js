@@ -10,7 +10,7 @@ export default function Table({
   keys,
   data,
   primaryKey,
-  onClick = () => { },
+  onClick = () => { console.log("clicked"); }, 
 }) {
   return (
     <div className='px-4 sm:px-6 lg:px-8'>
