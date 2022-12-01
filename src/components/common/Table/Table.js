@@ -45,8 +45,8 @@ export default function Table({
                           className='hover:text-dod-100 even:bg-gray-50 group cursor-pointer'
                           onClick={() => onClick(item[primaryKey])}
                         >
-                          {keys.map((key, index) => (
-                            <td key={index} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 group-hover:text-dod-100'>
+                          {keys.map((key, kindex) => (
+                            <td key={kindex} className='whitespace-nowrap text-sm font-medium text-gray-900 pl-2 py-2 group-hover:text-dod-100'>
                               {item[key] || '-'}
                             </td>
                           ))}

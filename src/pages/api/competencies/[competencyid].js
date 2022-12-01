@@ -6,7 +6,7 @@ export default function handler(req, res) {
 
   // find the competency in the data
   const competency = competenciesData.find(
-    (competency) => competency.competencyid == competencyid
+    (competencyObj) => competency.competencyid == competencyid
   );
 
   // if the competency is not found, return 404

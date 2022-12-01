@@ -8,9 +8,8 @@ export default function PersonPage() {
   // user data from the store
   const userData = useStore((state) => state.userData);
 
-  const {
-    query: { },
-  } = useAuthRouter();
+  useAuthRouter();
+  
   return (
     <DefaultLayout>
       <div className='bg-gray-300 w-full py-2 '>

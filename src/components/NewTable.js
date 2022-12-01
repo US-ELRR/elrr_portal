@@ -37,10 +37,10 @@ export default function NewTable({
                                 </thead>
                                 <tbody className='bg-white text-left '>
                                     {rowsData?.length > 0 &&
-                                        rowsData.map((row, rindex) => {
+                                        rowsData.map((row, index) => {
                                             return (
                                                 <tr
-                                                    key={rindex}
+                                                    key={index}
                                                     className=' even:bg-gray-50 group'
                                                 >
                                                     {row.map((eachItem, rindex) => (

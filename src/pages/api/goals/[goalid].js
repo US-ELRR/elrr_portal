@@ -6,7 +6,7 @@ export default function handler(req, res) {
 
     // find the goal in the data
     const goal = goalsData.find(
-        (goal) => goal.goalid == goalid
+        (goalObj) => goal.goalid == goalid
     );
 
     // if the goal is not found, return 404

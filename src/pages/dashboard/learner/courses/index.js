@@ -28,9 +28,9 @@ export default function CoursesPage() {
   const userData = useStore((state) => state.userData);
   const courses = userData?.learner?.courses
 
-  const filterCourses = (courses, query) => {
-    if (query.length < 1) { return courses }
-    return courses.filter(course => {
+  const filterCourses = (fcourses, query) => {
+    if (query.length < 1) { return fcourses }
+    return fcourses.filter(course => {
       const courseName = course.name.toLowerCase()
       return courseName.includes(query)
     })
