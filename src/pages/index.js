@@ -16,7 +16,7 @@ export default function LoginPage() {
   const { setUserData } = useStore((state) => state);
   const [credentials, setCredentials] = useState({
     username: '',
-    password: ''
+    password: '',
   });
 
   const handleUpdate = (e) => {
@@ -28,15 +28,17 @@ export default function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    axios
-      .post('/api/login', { ...credentials })
-      .then((res) => {
-        setUserData(res.data);
-        router.push('/dashboard');
-      })
-      .catch(() => {
-        console.log("Error");
-      });
+    if (credentials.username && credentials.password){
+      axios
+        .post('/api/login', { ...credentials })
+        .then((res) => {
+          setUserData(res.data);
+          router.push('/dashboard');
+        })
+        .catch(() => {
+          console.log("Error");
+        });
+    }
   };
 
   return (
