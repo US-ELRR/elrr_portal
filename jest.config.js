@@ -7,7 +7,7 @@ module.exports = {
     '<rootDir>/src/**/*.js',
     "!<rootDir>/src/pages/api/**/*.js",
     "!src/store/**",
-    "!<rootDir>/src/components/manager/career/CompetenciesRadarChart/**.js"
+    "!src/configurations/**"
   ],
   coveragePathIgnorePatterns: ['<rootDir>/src/pages/_app.js'],
   moduleNameMapper: {
