@@ -110,10 +110,9 @@ describe('CompetenciesRadarChart Component', () => {
     axios.get.mockImplementation(() => Promise.reject(new Error("Throwing an error!")));
     await act(async () => {
       render(
-        <MemoryRouterProvider>
-          <CompetenciesRadarChart userId={'101'} />
-        </MemoryRouterProvider>
+        <CompetenciesRadarChart userId={'100'} />
       );
     });
+
   });
 });
