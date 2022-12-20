@@ -18,6 +18,7 @@ export default function LoginPage() {
     username: '',
     password: '',
   });
+  const [errorMsg, setErrorMsg] = useState();
 
   const handleUpdate = (e) => {
     setCredentials((previous) => ({
@@ -28,15 +29,19 @@ export default function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (credentials.username && credentials.password){
+    if (credentials.username === '' || credentials.password === '') {
+      setErrorMsg('All fields required');
+    }
+    else{
       axios
         .post('/api/login', { ...credentials })
         .then((res) => {
+          setErrorMsg('');
           setUserData(res.data);
           router.push('/dashboard');
         })
         .catch(() => {
-          console.log("Error");
+          setErrorMsg('Invalid credentials');
         });
     }
   };
@@ -69,6 +74,7 @@ export default function LoginPage() {
             />
           </div>
           <p>Sign-in Using Common Access Card (CAC)</p>
+          <span className='text-red-500'>{errorMsg}</span>
           <Link href="/dashboard">
             <button
               onClick={handleLogin}
