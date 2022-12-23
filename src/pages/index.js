@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+import Alert from '@/components/Alert';
 import DODImage from '@/public/DOD.png';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Image from 'next/image';
@@ -18,7 +19,6 @@ export default function LoginPage() {
     username: '',
     password: '',
   });
-  const [errorMsg, setErrorMsg] = useState();
 
   const handleUpdate = (e) => {
     setCredentials((previous) => ({
@@ -26,13 +26,16 @@ export default function LoginPage() {
       [e.target.name]: e.target.value
     }));
   };
-
+  const [errorMsg, setErrorMsg] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  
   const handleLogin = (e) => {
     e.preventDefault();
-    if (credentials.username === '' || credentials.password === '') {
+    if(credentials.username === '' || credentials.password === ''){
       setErrorMsg('All fields required');
+      setIsOpen(!isOpen);
     }
-    else{
+    if (credentials.username && credentials.password){
       axios
         .post('/api/login', { ...credentials })
         .then((res) => {
@@ -41,7 +44,9 @@ export default function LoginPage() {
           router.push('/dashboard');
         })
         .catch(() => {
+          console.log("Error");
           setErrorMsg('Invalid credentials');
+          setIsOpen(!isOpen);
         });
     }
   };
@@ -74,7 +79,9 @@ export default function LoginPage() {
             />
           </div>
           <p>Sign-in Using Common Access Card (CAC)</p>
-          <span className='text-red-500'>{errorMsg}</span>
+          <div >
+            {isOpen && <Alert toggleModal={setIsOpen} message={errorMsg}/>}
+          </div>
           <Link href="/dashboard">
             <button
               onClick={handleLogin}
