@@ -72,6 +72,12 @@ export default function CoursesPage() {
   const handleDownloadCSV = () => {
     setRenderCSVDownload(true)
   }
+
+  const [startDateValue, setStartDateValue] = useState(null);
+  const [endDateValue, setEndDateValue] = useState(null);
+
+  console.log(startDateValue);
+
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
@@ -86,12 +92,39 @@ export default function CoursesPage() {
       <div class="flex flex-row pt-4">
         <div className="pr-5 ">
           <p> Start Date:</p>
-          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date"/>
+          <input datepicker type="date" value={startDateValue} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
+          <div className='flex justify-end'>
+            <button
+              id="startDateClear"
+              className='mt-0.5 w-min text-blue-400 hover:text-blue-400 hover:font-bold cursor-pointer text-xs text-right my-2 px-2 hover:underline focus:ring-2 ring-blue-300 outline-none rounded-full -mt-1 focus:text-blue-300 focus-text-shadow'
+              title='clear selection'
+              onClick={() => {
+                setStartDateValue(null)
+              }}
+            >
+              clear
+            </button>
+          </div>
         </div>
         <div>
           <p> End Date:</p>
-          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date"/>
+          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
+          <div className='flex justify-end'>
+            <button
+              id="endDateClear"
+              className='mt-0.5 w-min text-blue-400 hover:text-blue-400 hover:font-bold cursor-pointer text-xs text-right my-2 px-2 hover:underline focus:ring-2 ring-blue-300 outline-none rounded-full -mt-1 focus:text-blue-300 focus-text-shadow'
+              title='clear selection'
+              onClick={() => {
+                setEndDateValue(null)
+              }}
+            >
+              clear
+            </button>
+          </div>
         </div>
+        <button className='ml-10 mt-6 h-10 inline-flex items-center px-4  mr-2 text-sm font-bold leading-5 text-white transition duration-75 ease-in-out bg-dod-500 border border-transparent rounded-md hover:bg-dod-700 focus:outline-none focus:ring-dod-500 focus:ring-2 ring-offset-1 focus:border-dod-500'>
+          Filter by Date Range
+        </button>
       </div>
       <div ref={printRef}>
         {filteredCourses.length > 0 &&
