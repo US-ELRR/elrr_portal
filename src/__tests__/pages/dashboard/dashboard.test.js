@@ -13,7 +13,7 @@ describe("Dashboard Component", () => {
         expect(getByText("Enterprise Learner Record Repository")).toBeInTheDocument();
         expect(getByText(/U.S. Department of Defense/i)).toBeInTheDocument();
         expect(getByText(/login/i)).toBeInTheDocument();
-        expect(getByText(/Copyright © - 2022/i)).toBeInTheDocument();
+        expect(getByText(/Copyright © - 2024/i)).toBeInTheDocument();
         expect(getByText(/Disclaimer: The data on this website is for informational purposes/i)).toBeInTheDocument();
         expect(getAllByText(/About/i).length).toBe(2);
         expect(getByText(/DOD Home Page/i)).toBeInTheDocument();
