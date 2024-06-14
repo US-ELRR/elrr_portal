@@ -7,7 +7,7 @@ function classNames(...classes) {
 export default function Tabs({ tabNames = [], components = [<div></div>] }) {
 
     return (
-        <div className="w-full px-2 py-16 sm:px-0">
+        <div className="w-full px-2 py-6 sm:px-0">
             <Tab.Group>
                 <Tab.List className=" max-w-md flex space-x-1 rounded-xl bg-dod-500 p-1">
                     {tabNames.map(eachTabName => (

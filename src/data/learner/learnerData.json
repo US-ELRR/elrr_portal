@@ -70,7 +70,7 @@
         "provider": "DAU",
         "coursestartdate": "8/30/2022",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/f41c519bda04f7c398bd9306536a2e533021b5d449b3c1d23e809ccbcdaefa55d893c247b19e1654401fe6d44054092268e701f02d60c5c3c3d589490e35fd55"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f41c519bda04f7c398bd9306536a2e533021b5d449b3c1d23e809ccbcdaefa55d893c247b19e1654401fe6d44054092268e701f02d60c5c3c3d589490e35fd55"
       },
       {
         "name": "Supervisory Contracting",
@@ -78,7 +78,7 @@
         "provider": "DAU",
         "coursestartdate": "9/24/2022",
         "recordstatus": "Scheduled",
-        "courselink":"https://xds.deloitteopenelrr.com/course/e327577d5b35749b5a68bdbd1eec8b109159e80e14a10842fa8a903ecd3c3094553064d027271012504711fdd904d9744fd672897639745c3c102354b69a9412"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/e327577d5b35749b5a68bdbd1eec8b109159e80e14a10842fa8a903ecd3c3094553064d027271012504711fdd904d9744fd672897639745c3c102354b69a9412"
       },
       {
         "name": "Customer Focus",
@@ -86,7 +86,7 @@
         "provider": "DAU",
         "coursestartdate": "6/8/2020",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/f125d8a9aeca465bdfdb6beaec90df9e4e468f3c36efd62e1224c4d2e9382abd8f58ceb5e658a436054363f760c2beaf3bca32e71ce1d9d66269af83c945d238"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f125d8a9aeca465bdfdb6beaec90df9e4e468f3c36efd62e1224c4d2e9382abd8f58ceb5e658a436054363f760c2beaf3bca32e71ce1d9d66269af83c945d238"
       },
       {
         "name": "Applied Business Analysis Techniques",
@@ -94,7 +94,7 @@
         "provider": "DAU",
         "coursestartdate": "6/15/2020",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/c6349767ebcc1c026828acd3dca1eef4ee97a051ecedbd691148dd58eab42e3c8951ae435bdb664c40ef08e3635f144fc4a84ae0f41448d1f89ef0055acb75f7"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/c6349767ebcc1c026828acd3dca1eef4ee97a051ecedbd691148dd58eab42e3c8951ae435bdb664c40ef08e3635f144fc4a84ae0f41448d1f89ef0055acb75f7"
       },
       {
         "name": "Problem Solving for Defense Leaders",
@@ -102,7 +102,7 @@
         "provider": "DAU",
         "coursestartdate": "4/8/2022",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/55b79f07aaf0116430cf21ef55d785d4f99047fb6ab5325d3ae50a9fd693e5f6d2a21f9e8819cbf8cad08246615e338b9695d1525b23cb0afee66c317a1e10a5"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/55b79f07aaf0116430cf21ef55d785d4f99047fb6ab5325d3ae50a9fd693e5f6d2a21f9e8819cbf8cad08246615e338b9695d1525b23cb0afee66c317a1e10a5"
       },
       {
         "name": "Stakeholder Management",
@@ -110,7 +110,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "8/8/2022",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/3ab3a9ea67c5b2286660d079733e1e0fa2f26cfe76b3dc7c32dec20831f14ed80a2a2496e458f74ca020c0e6d2e0cca5655862b8254f747315de7dfc2e648413"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3ab3a9ea67c5b2286660d079733e1e0fa2f26cfe76b3dc7c32dec20831f14ed80a2a2496e458f74ca020c0e6d2e0cca5655862b8254f747315de7dfc2e648413"
       },
       {
         "name": "Innovation in Military Organizations",
@@ -118,7 +118,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "8/19/2020",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/b20d2182ccb1cd09dabd2c1c1e8628df0085786a762d161380cb1fcc0a3f073b7561734cf8dc8979468e568ea974eacad2741e3c97e2510ca0fbab9cdc07e19e"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/b20d2182ccb1cd09dabd2c1c1e8628df0085786a762d161380cb1fcc0a3f073b7561734cf8dc8979468e568ea974eacad2741e3c97e2510ca0fbab9cdc07e19e"
       },
       {
         "name": "Organization Theory and the Military",
@@ -126,7 +126,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "9/24/022",
         "recordstatus": "Registered",
-        "courselink":"https://xds.deloitteopenelrr.com/course/a3103d80627510476e366580ce318567537ef7bd8f9394a50f778c76db499ae2964acca4db73e60c36e8f23a2bf23760ce5a5fa66a58bb5b753017e4056c4363"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a3103d80627510476e366580ce318567537ef7bd8f9394a50f778c76db499ae2964acca4db73e60c36e8f23a2bf23760ce5a5fa66a58bb5b753017e4056c4363"
       },
       {
         "name": "Understanding Military Operations",
@@ -134,7 +134,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "3/9/2022",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/a68e30976f538fccfafaeb35259251179b3f3a0d15bc97cc863f33261ca6b1ba78035a63af338273133a9d600bdacbb3830764fb3cc1f349f3ba18c36ab0ecf5"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a68e30976f538fccfafaeb35259251179b3f3a0d15bc97cc863f33261ca6b1ba78035a63af338273133a9d600bdacbb3830764fb3cc1f349f3ba18c36ab0ecf5"
       },
       {
         "name": "Introduction to Computer Science: Programming Abstractions",
@@ -142,7 +142,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "8/9/2021",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/25838a06f03782635792e4264abf0e40158be045557ce774acc5e614ea43464c7faad21716a7e9cc145c5c66ac103e0c907eef8d592269626f275d118591b8d5"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/25838a06f03782635792e4264abf0e40158be045557ce774acc5e614ea43464c7faad21716a7e9cc145c5c66ac103e0c907eef8d592269626f275d118591b8d5"
       },
       {
         "name": "Introduction to Computer Science: Programming Paradigms",
@@ -150,7 +150,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "10/11/2021",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/a91b7ddd517f68a21bc088983d95637e547055e319db856a1c514bceb04929c8b41fd2907c09b94bb1a1a980324e18936055f37d652d21262daf420304e83595"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a91b7ddd517f68a21bc088983d95637e547055e319db856a1c514bceb04929c8b41fd2907c09b94bb1a1a980324e18936055f37d652d21262daf420304e83595"
       },
       {
         "name": "Ethics and Information Technology",
@@ -158,7 +158,7 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "6/14/2021",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/2a284ecde5374b21fac56cc81d785400bae6f21f5f51beb503d889083c83c0a0c806aa99b929cb2e9499ecc690301c6b76796229a8bb4d32ed9cd149ceb2158f"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/2a284ecde5374b21fac56cc81d785400bae6f21f5f51beb503d889083c83c0a0c806aa99b929cb2e9499ecc690301c6b76796229a8bb4d32ed9cd149ceb2158f"
       },
       {
         "name": "Information Technology and Global Deployment",
@@ -166,7 +166,215 @@
         "provider": "DoD Course Provider",
         "coursestartdate": "8/13/2021",
         "recordstatus": "Completed",
-        "courselink":"https://xds.deloitteopenelrr.com/course/3f455295c2eeef4c4a1e3023784901e38186595e5729ee922c2fc69c038dc6a9e31d26f3fcf18fed75c44ac4f2210e41fcc4fa692ba4d535f9cd28a8fc1ab2c2"
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3f455295c2eeef4c4a1e3023784901e38186595e5729ee922c2fc69c038dc6a9e31d26f3fcf18fed75c44ac4f2210e41fcc4fa692ba4d535f9cd28a8fc1ab2c2"
+      },
+      {
+        "name": "Business Essentials",
+        "courseid": "BUS 1100", 
+        "provider": "DAU",
+        "coursestartdate": "8/30/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f41c519bda04f7c398bd9306536a2e533021b5d449b3c1d23e809ccbcdaefa55d893c247b19e1654401fe6d44054092268e701f02d60c5c3c3d589490e35fd55"
+      },
+      {
+        "name": "Supervisory Contracting",
+        "courseid": "WSC 019", 
+        "provider": "DAU",
+        "coursestartdate": "9/24/2022",
+        "recordstatus": "Scheduled",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/e327577d5b35749b5a68bdbd1eec8b109159e80e14a10842fa8a903ecd3c3094553064d027271012504711fdd904d9744fd672897639745c3c102354b69a9412"
+      },
+      {
+        "name": "Customer Focus",
+        "courseid": "HBS 408", 
+        "provider": "DAU",
+        "coursestartdate": "6/8/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f125d8a9aeca465bdfdb6beaec90df9e4e468f3c36efd62e1224c4d2e9382abd8f58ceb5e658a436054363f760c2beaf3bca32e71ce1d9d66269af83c945d238"
+      },
+      {
+        "name": "Applied Business Analysis Techniques",
+        "courseid": "BCF 275V", 
+        "provider": "DAU",
+        "coursestartdate": "6/15/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/c6349767ebcc1c026828acd3dca1eef4ee97a051ecedbd691148dd58eab42e3c8951ae435bdb664c40ef08e3635f144fc4a84ae0f41448d1f89ef0055acb75f7"
+      },
+      {
+        "name": "Problem Solving for Defense Leaders",
+        "courseid": "EXE 4000V", 
+        "provider": "DAU",
+        "coursestartdate": "4/8/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/55b79f07aaf0116430cf21ef55d785d4f99047fb6ab5325d3ae50a9fd693e5f6d2a21f9e8819cbf8cad08246615e338b9695d1525b23cb0afee66c317a1e10a5"
+      },
+      {
+        "name": "Stakeholder Management",
+        "courseid": "WSM 007", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/8/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3ab3a9ea67c5b2286660d079733e1e0fa2f26cfe76b3dc7c32dec20831f14ed80a2a2496e458f74ca020c0e6d2e0cca5655862b8254f747315de7dfc2e648413"
+      },
+      {
+        "name": "Innovation in Military Organizations",
+        "courseid": "DODCP-MS02", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/19/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/b20d2182ccb1cd09dabd2c1c1e8628df0085786a762d161380cb1fcc0a3f073b7561734cf8dc8979468e568ea974eacad2741e3c97e2510ca0fbab9cdc07e19e"
+      },
+      {
+        "name": "Organization Theory and the Military",
+        "courseid": "DODCP-MS03", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "9/24/022",
+        "recordstatus": "Registered",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a3103d80627510476e366580ce318567537ef7bd8f9394a50f778c76db499ae2964acca4db73e60c36e8f23a2bf23760ce5a5fa66a58bb5b753017e4056c4363"
+      },
+      {
+        "name": "Understanding Military Operations",
+        "courseid": "DODCP-MS04", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "3/9/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a68e30976f538fccfafaeb35259251179b3f3a0d15bc97cc863f33261ca6b1ba78035a63af338273133a9d600bdacbb3830764fb3cc1f349f3ba18c36ab0ecf5"
+      },
+      {
+        "name": "Introduction to Computer Science: Programming Abstractions",
+        "courseid": "DODCP-CS03", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/9/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/25838a06f03782635792e4264abf0e40158be045557ce774acc5e614ea43464c7faad21716a7e9cc145c5c66ac103e0c907eef8d592269626f275d118591b8d5"
+      },
+      {
+        "name": "Introduction to Computer Science: Programming Paradigms",
+        "courseid": "DODCP-CS05", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "10/11/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a91b7ddd517f68a21bc088983d95637e547055e319db856a1c514bceb04929c8b41fd2907c09b94bb1a1a980324e18936055f37d652d21262daf420304e83595"
+      },
+      {
+        "name": "Ethics and Information Technology",
+        "courseid": "DODCP-IT02", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "6/14/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/2a284ecde5374b21fac56cc81d785400bae6f21f5f51beb503d889083c83c0a0c806aa99b929cb2e9499ecc690301c6b76796229a8bb4d32ed9cd149ceb2158f"
+      },
+      {
+        "name": "Information Technology and Global Deployment",
+        "courseid": "DODCP-IT04", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/13/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3f455295c2eeef4c4a1e3023784901e38186595e5729ee922c2fc69c038dc6a9e31d26f3fcf18fed75c44ac4f2210e41fcc4fa692ba4d535f9cd28a8fc1ab2c2"
+      },
+      {
+        "name": "Business Essentials",
+        "courseid": "BUS 1100", 
+        "provider": "DAU",
+        "coursestartdate": "8/30/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f41c519bda04f7c398bd9306536a2e533021b5d449b3c1d23e809ccbcdaefa55d893c247b19e1654401fe6d44054092268e701f02d60c5c3c3d589490e35fd55"
+      },
+      {
+        "name": "Supervisory Contracting",
+        "courseid": "WSC 019", 
+        "provider": "DAU",
+        "coursestartdate": "9/24/2022",
+        "recordstatus": "Scheduled",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/e327577d5b35749b5a68bdbd1eec8b109159e80e14a10842fa8a903ecd3c3094553064d027271012504711fdd904d9744fd672897639745c3c102354b69a9412"
+      },
+      {
+        "name": "Customer Focus",
+        "courseid": "HBS 408", 
+        "provider": "DAU",
+        "coursestartdate": "6/8/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/f125d8a9aeca465bdfdb6beaec90df9e4e468f3c36efd62e1224c4d2e9382abd8f58ceb5e658a436054363f760c2beaf3bca32e71ce1d9d66269af83c945d238"
+      },
+      {
+        "name": "Applied Business Analysis Techniques",
+        "courseid": "BCF 275V", 
+        "provider": "DAU",
+        "coursestartdate": "6/15/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/c6349767ebcc1c026828acd3dca1eef4ee97a051ecedbd691148dd58eab42e3c8951ae435bdb664c40ef08e3635f144fc4a84ae0f41448d1f89ef0055acb75f7"
+      },
+      {
+        "name": "Problem Solving for Defense Leaders",
+        "courseid": "EXE 4000V", 
+        "provider": "DAU",
+        "coursestartdate": "4/8/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/55b79f07aaf0116430cf21ef55d785d4f99047fb6ab5325d3ae50a9fd693e5f6d2a21f9e8819cbf8cad08246615e338b9695d1525b23cb0afee66c317a1e10a5"
+      },
+      {
+        "name": "Stakeholder Management",
+        "courseid": "WSM 007", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/8/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3ab3a9ea67c5b2286660d079733e1e0fa2f26cfe76b3dc7c32dec20831f14ed80a2a2496e458f74ca020c0e6d2e0cca5655862b8254f747315de7dfc2e648413"
+      },
+      {
+        "name": "Innovation in Military Organizations",
+        "courseid": "DODCP-MS02", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/19/2020",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/b20d2182ccb1cd09dabd2c1c1e8628df0085786a762d161380cb1fcc0a3f073b7561734cf8dc8979468e568ea974eacad2741e3c97e2510ca0fbab9cdc07e19e"
+      },
+      {
+        "name": "Organization Theory and the Military",
+        "courseid": "DODCP-MS03", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "9/24/022",
+        "recordstatus": "Registered",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a3103d80627510476e366580ce318567537ef7bd8f9394a50f778c76db499ae2964acca4db73e60c36e8f23a2bf23760ce5a5fa66a58bb5b753017e4056c4363"
+      },
+      {
+        "name": "Understanding Military Operations",
+        "courseid": "DODCP-MS04", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "3/9/2022",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a68e30976f538fccfafaeb35259251179b3f3a0d15bc97cc863f33261ca6b1ba78035a63af338273133a9d600bdacbb3830764fb3cc1f349f3ba18c36ab0ecf5"
+      },
+      {
+        "name": "Introduction to Computer Science: Programming Abstractions",
+        "courseid": "DODCP-CS03", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/9/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/25838a06f03782635792e4264abf0e40158be045557ce774acc5e614ea43464c7faad21716a7e9cc145c5c66ac103e0c907eef8d592269626f275d118591b8d5"
+      },
+      {
+        "name": "Introduction to Computer Science: Programming Paradigms",
+        "courseid": "DODCP-CS05", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "10/11/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/a91b7ddd517f68a21bc088983d95637e547055e319db856a1c514bceb04929c8b41fd2907c09b94bb1a1a980324e18936055f37d652d21262daf420304e83595"
+      },
+      {
+        "name": "Ethics and Information Technology",
+        "courseid": "DODCP-IT02", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "6/14/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/2a284ecde5374b21fac56cc81d785400bae6f21f5f51beb503d889083c83c0a0c806aa99b929cb2e9499ecc690301c6b76796229a8bb4d32ed9cd149ceb2158f"
+      },
+      {
+        "name": "Information Technology and Global Deployment",
+        "courseid": "DODCP-IT04", 
+        "provider": "DoD Course Provider",
+        "coursestartdate": "8/13/2021",
+        "recordstatus": "Completed",
+        "courselink":"https://dev-xds.deloitteopenlxp.com/course/3f455295c2eeef4c4a1e3023784901e38186595e5729ee922c2fc69c038dc6a9e31d26f3fcf18fed75c44ac4f2210e41fcc4fa692ba4d535f9cd28a8fc1ab2c2"
       }
     ],
     "competencies": [

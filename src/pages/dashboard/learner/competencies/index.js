@@ -4,6 +4,8 @@ import DefaultLayout from '@/components/layouts/DefaultLayout';
 import Table from '@/components/common/Table';
 import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
+import Search from '@/components/Search';
+import { useState } from 'react';
 
 export default function CompetenciesPage() {
   const keys = ['competencyframeworktitle','competencyid','provider','recordstatus'];
@@ -13,6 +15,18 @@ export default function CompetenciesPage() {
   const handleClick = (id) => {
     router.push(`/dashboard/learner/competencies/${id}`);
   };
+
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filterComp = (competency, query) => {
+    if (query.length < 1) { return competency }
+    return competency.filter(competency => {
+      const compName = competency.title.toLowerCase()
+      return compName.includes(query.toLowerCase())
+    })
+  }
+  
+  // let filteredData = filterComp(content, searchQuery) || []
 
   const panelCode = (content) =>
     content.map((competency, index) => {
@@ -95,18 +109,21 @@ export default function CompetenciesPage() {
 
   const tabNames = ['Awarded', 'In Progress']
   const components = [<div>
-    {panelCode(awardedContent)}
+    {panelCode(filterComp(awardedContent, searchQuery) || [])}
   </div>, <div>
-    {panelCode(progressContent)}
+    {panelCode(filterComp(progressContent, searchQuery) || [])}
   </div>]
-
-
 
   return (
     <DefaultLayout>
       <h1 className='text-3xl font-semibold text-center bg-gray-300 w-full py-2 '>
         Competencies Page
       </h1>
+      <div className='my-8'>
+        <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+      </div>
+      
       <Tabs tabNames={tabNames} components={components} />
     </DefaultLayout>
   );

@@ -160,7 +160,7 @@ describe("PersonPage Component", () => {
                   "courselrsendpoint": null,
                   "coursedescription": null,
                   "recordstatus": "ACTIVE",
-                  "courselink": "https://xds.deloitteopenelrr.com/course/db9392f68d542d207e23b78e82a5d5e75da84c3bd26d4bced26dc8ed584fae630429842cc879ed02a44687b597c959b2392f5e862ae35adc0ba9ea768f6f5519"
+                  "courselink": "https://dev-xds.deloitteopenlxp.com/course/db9392f68d542d207e23b78e82a5d5e75da84c3bd26d4bced26dc8ed584fae630429842cc879ed02a44687b597c959b2392f5e862ae35adc0ba9ea768f6f5519"
                 },
                 {
                   "courseid": 101,
@@ -183,7 +183,7 @@ describe("PersonPage Component", () => {
                   "courselrsendpoint": null,
                   "coursedescription": null,
                   "recordstatus": "ACTIVE",
-                  "courselink": "https://xds.deloitteopenelrr.com/course/e9ab5a26f741e0d77c577d4128c492a87e861a1ea5d97e094e1073844e7e0d44cc3b466387100be7d747c6d44ca537f4d53ad27fbd00ebf33f8a71921e2ee48d"
+                  "courselink": "https://dev-xds.deloitteopenlxp.com/course/e9ab5a26f741e0d77c577d4128c492a87e861a1ea5d97e094e1073844e7e0d44cc3b466387100be7d747c6d44ca537f4d53ad27fbd00ebf33f8a71921e2ee48d"
                 },
                 {
                   "courseid": 102,
@@ -206,7 +206,7 @@ describe("PersonPage Component", () => {
                   "courselrsendpoint": null,
                   "coursedescription": null,
                   "recordstatus": "ACTIVE",
-                  "courselink": "https://xds.deloitteopenelrr.com/course/de47bc41700b7619b3751505ba3be12d3e5bdff06be490b7a73a98f33744eaff252ca4a8beb64b27285a3b470e10d3ea0d26a72e4c0a751c1c66f29d9e341891"
+                  "courselink": "https://dev-xds.deloitteopenlxp.com/course/de47bc41700b7619b3751505ba3be12d3e5bdff06be490b7a73a98f33744eaff252ca4a8beb64b27285a3b470e10d3ea0d26a72e4c0a751c1c66f29d9e341891"
                 },
           
                 {
@@ -230,7 +230,7 @@ describe("PersonPage Component", () => {
                   "courselrsendpoint": null,
                   "coursedescription": null,
                   "recordstatus": "ACTIVE",
-                  "courselink": "https://xds.deloitteopenelrr.com/course/f2457f074196da385cfea0235e8429ebf197b0555b9ce4cd25ecb9279f08dce8ef090b3a1c75e703978b67926a7ced821433302a842e51a2ee1055d06cfaa15c"
+                  "courselink": "https://dev-xds.deloitteopenlxp.com/course/f2457f074196da385cfea0235e8429ebf197b0555b9ce4cd25ecb9279f08dce8ef090b3a1c75e703978b67926a7ced821433302a842e51a2ee1055d06cfaa15c"
                 }
               ],
             "competencies": [
