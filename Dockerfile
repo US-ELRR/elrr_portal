@@ -6,6 +6,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install 
 
+
 # Rebuild the source code only when needed
 FROM node:18.20.3-alpine AS builder
 WORKDIR /app
