@@ -4,9 +4,9 @@ name: Docker-CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
     types: [opened, synchronize, reopened]
   schedule:
     - cron: '40 3 * * 3'
