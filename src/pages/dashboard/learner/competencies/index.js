@@ -1,3 +1,4 @@
+/* eslint-disable sort-imports-es6-autofix/sort-imports-es6 */
 import { Disclosure, Transition } from '@headlessui/react'
 
 import { ChevronDownIcon } from '@heroicons/react/outline';
