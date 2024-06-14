@@ -4,10 +4,11 @@ import { useRef, useState } from 'react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DropDownButton from '@/components/DropDownButton';
 import Search from '@/components/Search';
-import Table from '@/components/common/Table';
 import html2canvas from 'html2canvas';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
+import PaginationTable from "@/components/common/Table/PaginationTable";
+import Table from "@/components/common/Table";
 
 const columnTitles = [
   'Course Title',
@@ -32,7 +33,7 @@ export default function CoursesPage() {
     if (query.length < 1) { return courses }
     return courses.filter(course => {
       const courseName = course.name.toLowerCase()
-      return courseName.includes(query)
+      return courseName.includes(query.toLowerCase())
     })
   }
 
@@ -80,10 +81,20 @@ export default function CoursesPage() {
         <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <DropDownButton handleDownloadClick={handleDownloadClick} buttonText={'Download'} items={['PDF', 'CSV']} />
       </div>
-      <div ref={printRef}
-      >
+
+      <div class="flex flex-row pt-4">
+        <div className="pr-5 ">
+          <p> Start Date:</p>
+          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date"/>
+        </div>
+        <div>
+          <p> End Date:</p>
+          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date"/>
+        </div>
+      </div>
+      <div ref={printRef}>
         {filteredCourses.length > 0 &&
-          <Table
+          <PaginationTable
             data={filteredCourses}
             cols={columnTitles}
             keys={keys}

@@ -117,7 +117,7 @@ export default function Personnel() {
               // onClick={handleClick}
             />
             <div className='flex justify-end'>
-              <Button btnText={"Go to ECC"} link={"https://xds.deloitteopenelrr.com"} newTabLink />
+              <Button btnText={"Go to ECC"} link={"https://dev-xds.deloitteopenlxp.com"} newTabLink />
             </div>
           </Card>
         </div>

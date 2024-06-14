@@ -30,7 +30,7 @@ export default function SystemAdminDashboard() {
     return (
         <div className="flex flex-row justify-evenly">
             {cardFront?.map((eachObj, index) => (
-                <Link key={index} href={eachObj.href} >
+                <Link key={index} href={eachObj.href} legacyBehavior>
                     <a><DashboardCard cardFront={eachObj} /></a>
                 </Link>
             ))}
