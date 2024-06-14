@@ -1,8 +1,6 @@
 # Install dependencies only when needed
 FROM node:18.20.3 AS deps
 
-18.20.3
-
 # RUN apk add libc6-compat
 WORKDIR /app
 COPY package.json ./
