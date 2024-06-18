@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 export default function CompetenciesPage() {
   const keys = ['competencyframeworktitle','competencyid','provider','recordstatus'];
-  const cols = ['Course Title', 'Course ID', "Coures ID",'Status'];
+  const cols = ['Course Title', 'Course ID', "Coures Provider",'Status'];
   const router = useAuthRouter();
 
   const handleClick = (id) => {
