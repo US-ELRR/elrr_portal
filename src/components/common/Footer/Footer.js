@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className='max-w-7xl border-t mx-auto px-4 py-2 mt-8 flex justify-between items-end text-sm print:hidden'>
       <div id='copy-right' className='text-sm'>
         <p>
-          <span>Copyright &copy; - 2022</span>
+          <span>Copyright &copy; - 2024</span>
         </p>
         <p>
           Disclaimer: The data on this website is for informational purposes
