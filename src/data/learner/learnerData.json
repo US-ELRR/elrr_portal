@@ -83,7 +83,7 @@
       {
         "name": "Customer Focus",
         "courseid": "HBS 408", 
-        "provider": "DAU",
+        "provider": "One University",
         "coursestartdate": "6/8/2020",
         "recordstatus": "Completed",
         "courselink":"https://dev-xds.deloitteopenlxp.com/course/f125d8a9aeca465bdfdb6beaec90df9e4e468f3c36efd62e1224c4d2e9382abd8f58ceb5e658a436054363f760c2beaf3bca32e71ce1d9d66269af83c945d238"
@@ -99,7 +99,7 @@
       {
         "name": "Problem Solving for Defense Leaders",
         "courseid": "EXE 4000V", 
-        "provider": "DAU",
+        "provider": "One University",
         "coursestartdate": "4/8/2022",
         "recordstatus": "Completed",
         "courselink":"https://dev-xds.deloitteopenlxp.com/course/55b79f07aaf0116430cf21ef55d785d4f99047fb6ab5325d3ae50a9fd693e5f6d2a21f9e8819cbf8cad08246615e338b9695d1525b23cb0afee66c317a1e10a5"
@@ -107,7 +107,7 @@
       {
         "name": "Stakeholder Management",
         "courseid": "WSM 007", 
-        "provider": "DoD Course Provider",
+        "provider": "One University",
         "coursestartdate": "8/8/2022",
         "recordstatus": "Completed",
         "courselink":"https://dev-xds.deloitteopenlxp.com/course/3ab3a9ea67c5b2286660d079733e1e0fa2f26cfe76b3dc7c32dec20831f14ed80a2a2496e458f74ca020c0e6d2e0cca5655862b8254f747315de7dfc2e648413"
@@ -123,7 +123,7 @@
       {
         "name": "Organization Theory and the Military",
         "courseid": "DODCP-MS03", 
-        "provider": "DoD Course Provider",
+        "provider": "TOU College",
         "coursestartdate": "9/24/022",
         "recordstatus": "Registered",
         "courselink":"https://dev-xds.deloitteopenlxp.com/course/a3103d80627510476e366580ce318567537ef7bd8f9394a50f778c76db499ae2964acca4db73e60c36e8f23a2bf23760ce5a5fa66a58bb5b753017e4056c4363"
