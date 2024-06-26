@@ -1,16 +1,21 @@
 import { CSVDownload } from "react-csv";
 import { jsPDF } from 'jspdf';
 import { useRef, useState, useEffect } from 'react'
+
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DropDownButton from '@/components/DropDownButton';
+import PaginationTable from "@/components/common/Table/PaginationTable";
 import Search from '@/components/Search';
 import html2canvas from 'html2canvas';
+// import Table from "@/components/common/Table";
+import { jsPDF } from 'jspdf';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 import PaginationTable from "@/components/common/Table/PaginationTable";
 import Table from "@/components/common/Table";
 import axios from "axios";
 import { courses_url, learner_url } from "@/config/endpoints";
+
 
 const columnTitles = [
   'Course Title',

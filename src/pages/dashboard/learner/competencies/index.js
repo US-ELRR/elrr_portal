@@ -1,6 +1,9 @@
-import { ChevronDownIcon } from '@heroicons/react/outline';
+/* eslint-disable sort-imports-es6-autofix/sort-imports-es6 */
 import { Disclosure, Transition } from '@headlessui/react'
+
+import { ChevronDownIcon } from '@heroicons/react/outline';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
+import Search from '@/components/Search';
 import Table from '@/components/common/Table';
 import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
