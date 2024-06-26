@@ -1,6 +1,6 @@
 import { CSVDownload } from "react-csv";
 import { jsPDF } from 'jspdf';
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DropDownButton from '@/components/DropDownButton';
 import Search from '@/components/Search';
@@ -9,6 +9,8 @@ import useAuthRouter from '@/hooks/useAuthRouter';
 import useStore from '@/store/store';
 import PaginationTable from "@/components/common/Table/PaginationTable";
 import Table from "@/components/common/Table";
+import axios from "axios";
+import { courses_url, learner_url } from "@/config/endpoints";
 
 const columnTitles = [
   'Course Title',
@@ -18,7 +20,7 @@ const columnTitles = [
   'Status',
 ];
 
-const keys = ['name', 'courseid', 'provider','coursestartdate', 'recordstatus'];
+const keys = ['name', 'courseid', 'coursemetadatarepository','coursestartdate', 'recordstatus'];
 
 export default function CoursesPage() {
 
@@ -27,11 +29,34 @@ export default function CoursesPage() {
 
   const router = useAuthRouter();
   const userData = useStore((state) => state.userData);
-  const courses = userData?.learner?.courses
+  // const courses = userData?.learner?.courses
+
+  const [courses, setCourses] = useState(null);
+  // useEffect(() => {
+  //   axios.get(courses_url)
+  //     .then((response) => {
+  //       setCourses(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error)
+  //       console.log("Courses unable to be loaded. Contact system admin.");
+  //     });
+  // }, []);
+
+  useEffect(() => {
+    axios.get(learner_url+"1")
+      .then((response) => {
+        setCourses(response.data.courses);
+      })
+      .catch((error) => {
+        console.log(error)
+        console.log("Courses unable to be loaded. Contact system admin.");
+      });
+  }, []);
 
   const filterCourses = (courses, query) => {
     if (query.length < 1) { return courses }
-    return courses.filter(course => {
+    return courses?.filter(course => {
       const courseName = course.name.toLowerCase()
       return courseName.includes(query.toLowerCase())
     })
@@ -72,10 +97,9 @@ export default function CoursesPage() {
     setRenderCSVDownload(true)
   }
 
-  const [startDateValue, setStartDateValue] = useState(null);
-  const [endDateValue, setEndDateValue] = useState(null);
+  const [startDateValue, setStartDateValue] = useState('');
+  const [endDateValue, setEndDateValue] = useState('');
 
-  console.log(startDateValue);
 
   return (
     <DefaultLayout>
@@ -88,10 +112,10 @@ export default function CoursesPage() {
         <DropDownButton handleDownloadClick={handleDownloadClick} buttonText={'Download'} items={['PDF', 'CSV']} />
       </div>
 
-      <div class="flex flex-row pt-4">
+      <div className="flex flex-row pt-4">
         <div className="pr-5 ">
           <p> Start Date:</p>
-          <input datepicker type="date" value={startDateValue} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
+          <input datepicker type="date" value={startDateValue} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
           <div className='flex justify-end'>
             <button
               id="startDateClear"
@@ -107,7 +131,7 @@ export default function CoursesPage() {
         </div>
         <div>
           <p> End Date:</p>
-          <input datepicker type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
+          <input datepicker type="date" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
           <div className='flex justify-end'>
             <button
               id="endDateClear"
@@ -126,9 +150,9 @@ export default function CoursesPage() {
         </button>
       </div>
       <div ref={printRef}>
-        {filteredCourses.length > 0 &&
+        {filteredCourses?.length > 0 &&
           <PaginationTable
-            data={filteredCourses}
+            filteredData={filteredCourses}
             cols={columnTitles}
             keys={keys}
             primaryKey={'courselink'}

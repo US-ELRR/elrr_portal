@@ -5,7 +5,10 @@ import Table from '@/components/common/Table';
 import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
 import Search from '@/components/Search';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { learner_url } from '@/config/endpoints';
+
 
 export default function CompetenciesPage() {
   const keys = ['competencyframeworktitle','competencyid','provider','recordstatus'];
@@ -35,7 +38,7 @@ export default function CompetenciesPage() {
             {({ open }) => (
             <div className='p-2 hover:bg-gray-200 hover:rounded-lg'>
               <Disclosure.Button className="flex items-center rounded-lg justify-between text-left w-full p-5 font-medium border bg-dod-300 text-white border-gray-300 hover:opacity-90 hover:shadow ">
-                  {competency.title}
+                  {competency.competencyframeworktitle}
                   <ChevronDownIcon className={`w-6 h-6 ${open ? "transform rotate-180" : ""} `} />
               </Disclosure.Button>
 
@@ -51,10 +54,10 @@ export default function CompetenciesPage() {
                   {competency.title !== "Unassigned Tasks" &&
                       <div className='flex flex-col'>
                           <div>
-                            <b>Description:  </b>{competency.description}
+                            <b>Description:  </b>{competency.competencyframeworkdescription}
                           </div>
                           <div>
-                            <b>Owner: </b>{competency.owner}
+                            <b>Subject: </b>{competency.competencyframeworksubject}
                           </div>
                       </div>
                   }
@@ -72,44 +75,55 @@ export default function CompetenciesPage() {
         );
     });
 
-    const awardedContent = [
-      {   title: "Business Skills & Acumen",
-          description: "DoD Contracting Competency Model 1-2022, Managing contracts throughout the contract life cycle while ensuring customer satisfaction",
-          owner: "DAU",
-          compData: [{'competencyframeworktitle':"Customer Focus", 'competencyid': "HBS 408", 'provider':"DAU",'recordstatus':"Inferred"},
-            {'competencyframeworktitle':"Applied Business Analysis Techniques", 'competencyid': "BCF 275V", 'provider':"DAU",'recordstatus':"Inferred"},
-            {'competencyframeworktitle':"Problem Solving for Defense Leaders", 'competencyid': "EXE 4000V", 'provider':"DAU",'recordstatus':"Inferred"},
-            {'competencyframeworktitle':"Stakeholder Management", 'competencyid': "WSM 007", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
-      },
-      {   title: "General Computer Science Concepts",
-          description: "Version 1.2, Understanding of principles of software engineering and development; part of computer science curriculum.",
-          owner: "Division of IT",
-          compData: [{'competencyframeworktitle':"Introduction to Computer Science: Programming Abstractions", 'competencyid': "DODCP-CS03", 'provider':"DoD Course Provider",'recordstatus':"Inferred"},
-            {'competencyframeworktitle':"Introduction to Computer Science: Programming Paradigms", 'competencyid': "DODCP-CS05", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
-            {'competencyframeworktitle':"Ethics and Information Technology", 'competencyid': "DODCP-IT02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
-            {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
-
-      },
+  const awardedContent = [
+    {   title: "Business Skills & Acumen",
+        description: "DoD Contracting Competency Model 1-2022, Managing contracts throughout the contract life cycle while ensuring customer satisfaction",
+        owner: "DAU",
+        compData: [{'competencyframeworktitle':"Customer Focus", 'competencyid': "HBS 408", 'provider':"DAU",'recordstatus':"Inferred"},
+          {'competencyframeworktitle':"Applied Business Analysis Techniques", 'competencyid': "BCF 275V", 'provider':"DAU",'recordstatus':"Inferred"},
+          {'competencyframeworktitle':"Problem Solving for Defense Leaders", 'competencyid': "EXE 4000V", 'provider':"DAU",'recordstatus':"Inferred"},
+          {'competencyframeworktitle':"Stakeholder Management", 'competencyid': "WSM 007", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
+    },
+    {   title: "General Computer Science Concepts",
+        description: "Version 1.2, Understanding of principles of software engineering and development; part of computer science curriculum.",
+        owner: "Division of IT",
+        compData: [{'competencyframeworktitle':"Introduction to Computer Science: Programming Abstractions", 'competencyid': "DODCP-CS03", 'provider':"DoD Course Provider",'recordstatus':"Inferred"},
+          {'competencyframeworktitle':"Introduction to Computer Science: Programming Paradigms", 'competencyid': "DODCP-CS05", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+          {'competencyframeworktitle':"Ethics and Information Technology", 'competencyid': "DODCP-IT02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+          {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
+    },
   ]
   
   const progressContent = [
-    {   title: "General Contacting Concepts",
-        description: "DoD Contracting Competency Model 1-2022, Fundamentals of contracting that all contract managers must understand and apply ",
-        owner: "DAU",
+    {   competencyframeworktitle: "General Contacting Concepts",
+        competencyframeworkdescription: "DoD Contracting Competency Model 1-2022, Fundamentals of contracting that all contract managers must understand and apply ",
+        competencyframeworksubject: "DAU",
         compData: [{'competencyframeworktitle':"Business Essentials", 'competencyid': "BUS 1100", 'provider':"DAU",'recordstatus':"Inferred"},
             {'competencyframeworktitle':"Supervisory Contracting", 'competencyid': "WSC 109", 'provider':"DAU",'recordstatus':"Inferred"}]
     },
-    {   title: "Credential: Basic Military Planning",
-        description: "Version 2021-2, Providing learners with an introductory overview of great topics related to military planning.",
-        owner: "Open Military Institute",
+    {   competencyframeworktitle: "Credential: Basic Military Planning",
+        competencyframeworkdescription: "Version 2021-2, Providing learners with an introductory overview of great topics related to military planning.",
+        competencyframeworksubject: "Open Military Institute",
         compData: [{'competencyframeworktitle':"Innovation in Military Organizations", 'competencyid': "DODCP-MS02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
             {'competencyframeworktitle':"Understanding Military Operations", 'competencyid': "DODCP-MS04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
     },
   ]
 
+  const [competencies, setCompetencies] = useState(null);
+  useEffect(() => {
+    axios.get(learner_url+"1")
+      .then((response) => {
+        setCompetencies(response.data.competencies);
+      })
+      .catch((error) => {
+        console.log(error)
+        console.log("Courses unable to be loaded. Contact system admin.");
+      });
+  }, []);
+
   const tabNames = ['Awarded', 'In Progress']
   const components = [<div>
-    {panelCode(filterComp(awardedContent, searchQuery) || [])}
+    {panelCode(filterComp(competencies, searchQuery) || [])}
   </div>, <div>
     {panelCode(filterComp(progressContent, searchQuery) || [])}
   </div>]
