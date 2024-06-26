@@ -1,11 +1,10 @@
 
+import { learner_url } from '@/config/endpoints';
+import { useEffect, useState } from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
-import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { learner_url } from '@/config/endpoints';
+import useAuthRouter from '@/hooks/useAuthRouter';
 
 export default function PersonPage() {
   // user data from the store

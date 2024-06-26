@@ -1,16 +1,16 @@
 import { CSVDownload } from "react-csv";
 import { jsPDF } from 'jspdf';
-import { useRef, useState, useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DropDownButton from '@/components/DropDownButton';
 import PaginationTable from "@/components/common/Table/PaginationTable";
 import Search from '@/components/Search';
 import html2canvas from 'html2canvas';
+
 // import Table from "@/components/common/Table";
-import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
-import axios from "axios";
 import { learner_url } from "@/config/endpoints";
+import axios from "axios";
+import useAuthRouter from '@/hooks/useAuthRouter';
 
 
 const columnTitles = [
@@ -29,10 +29,12 @@ export default function CoursesPage() {
   const [renderCSVDownload, setRenderCSVDownload] = useState(false)
 
   const router = useAuthRouter();
+
   // const userData = useStore((state) => state.userData);
   // const courses = userData?.learner?.courses
 
   const [courses, setCourses] = useState(null);
+
   // useEffect(() => {
   //   axios.get(courses_url)
   //     .then((response) => {

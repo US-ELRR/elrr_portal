@@ -7,7 +7,7 @@
     "unused-imports"
   ],
   "rules": {
-    "no-console": 1,
+    "no-console": "off",
     "react/jsx-key": "off",
     "react/no-unknown-property": [0],
     "sort-imports-es6-autofix/sort-imports-es6": [
