@@ -77,24 +77,24 @@ export default function CompetenciesPage() {
         );
     });
 
-  const awardedContent = [
-    {   title: "Business Skills & Acumen",
-        description: "DoD Contracting Competency Model 1-2022, Managing contracts throughout the contract life cycle while ensuring customer satisfaction",
-        owner: "DAU",
-        compData: [{'competencyframeworktitle':"Customer Focus", 'competencyid': "HBS 408", 'provider':"DAU",'recordstatus':"Inferred"},
-          {'competencyframeworktitle':"Applied Business Analysis Techniques", 'competencyid': "BCF 275V", 'provider':"DAU",'recordstatus':"Inferred"},
-          {'competencyframeworktitle':"Problem Solving for Defense Leaders", 'competencyid': "EXE 4000V", 'provider':"DAU",'recordstatus':"Inferred"},
-          {'competencyframeworktitle':"Stakeholder Management", 'competencyid': "WSM 007", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
-    },
-    {   title: "General Computer Science Concepts",
-        description: "Version 1.2, Understanding of principles of software engineering and development; part of computer science curriculum.",
-        owner: "Division of IT",
-        compData: [{'competencyframeworktitle':"Introduction to Computer Science: Programming Abstractions", 'competencyid': "DODCP-CS03", 'provider':"DoD Course Provider",'recordstatus':"Inferred"},
-          {'competencyframeworktitle':"Introduction to Computer Science: Programming Paradigms", 'competencyid': "DODCP-CS05", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
-          {'competencyframeworktitle':"Ethics and Information Technology", 'competencyid': "DODCP-IT02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
-          {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
-    },
-  ]
+  // const awardedContent = [
+  //   {   title: "Business Skills & Acumen",
+  //       description: "DoD Contracting Competency Model 1-2022, Managing contracts throughout the contract life cycle while ensuring customer satisfaction",
+  //       owner: "DAU",
+  //       compData: [{'competencyframeworktitle':"Customer Focus", 'competencyid': "HBS 408", 'provider':"DAU",'recordstatus':"Inferred"},
+  //         {'competencyframeworktitle':"Applied Business Analysis Techniques", 'competencyid': "BCF 275V", 'provider':"DAU",'recordstatus':"Inferred"},
+  //         {'competencyframeworktitle':"Problem Solving for Defense Leaders", 'competencyid': "EXE 4000V", 'provider':"DAU",'recordstatus':"Inferred"},
+  //         {'competencyframeworktitle':"Stakeholder Management", 'competencyid': "WSM 007", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
+  //   },
+  //   {   title: "General Computer Science Concepts",
+  //       description: "Version 1.2, Understanding of principles of software engineering and development; part of computer science curriculum.",
+  //       owner: "Division of IT",
+  //       compData: [{'competencyframeworktitle':"Introduction to Computer Science: Programming Abstractions", 'competencyid': "DODCP-CS03", 'provider':"DoD Course Provider",'recordstatus':"Inferred"},
+  //         {'competencyframeworktitle':"Introduction to Computer Science: Programming Paradigms", 'competencyid': "DODCP-CS05", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+  //         {'competencyframeworktitle':"Ethics and Information Technology", 'competencyid': "DODCP-IT02", 'provider':"DoD Course Provider",'recordstatus':"Asserted"},
+  //         {'competencyframeworktitle':"Information Technology and Global Deployment", 'competencyid': "DODCP-IT04", 'provider':"DoD Course Provider",'recordstatus':"Inferred"}]
+  //   },
+  // ]
   
   const progressContent = [
     {   competencyframeworktitle: "General Contacting Concepts",
@@ -118,7 +118,6 @@ export default function CompetenciesPage() {
         setCompetencies(response.data.competencies);
       })
       .catch((error) => {
-        console.log(error)
         console.log("Courses unable to be loaded. Contact system admin.");
       });
   }, []);

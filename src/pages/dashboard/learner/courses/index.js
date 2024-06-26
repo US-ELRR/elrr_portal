@@ -8,7 +8,6 @@ import Search from '@/components/Search';
 import html2canvas from 'html2canvas';
 // import Table from "@/components/common/Table";
 import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 import axios from "axios";
 import { learner_url } from "@/config/endpoints";
 
@@ -49,8 +48,7 @@ export default function CoursesPage() {
       .then((response) => {
         setCourses(response.data.courses);
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(() => {
         console.log("Courses unable to be loaded. Contact system admin.");
       });
   }, []);
@@ -132,7 +130,7 @@ export default function CoursesPage() {
         </div>
         <div>
           <p> End Date:</p>
-          <input datepicker type="date" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
+          <input datepicker type="date" value={endDateValue} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" selected={startDateValue} onChange={d => setStartDateValue(d.target.value)}/>
           <div className='flex justify-end'>
             <button
               id="endDateClear"
