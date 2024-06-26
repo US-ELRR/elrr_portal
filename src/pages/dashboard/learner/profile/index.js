@@ -9,7 +9,7 @@ import { learner_url } from '@/config/endpoints';
 
 export default function PersonPage() {
   // user data from the store
-  const userData = useStore((state) => state.userData);
+  // const userData = useStore((state) => state.userData);
 
   const [personnelInfo, setpersonnelInfo] = useState(null);
 

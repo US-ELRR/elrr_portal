@@ -29,7 +29,7 @@ export default function CoursesPage() {
   const [renderCSVDownload, setRenderCSVDownload] = useState(false)
 
   const router = useAuthRouter();
-  const userData = useStore((state) => state.userData);
+  // const userData = useStore((state) => state.userData);
   // const courses = userData?.learner?.courses
 
   const [courses, setCourses] = useState(null);
