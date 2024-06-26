@@ -7,7 +7,6 @@ import Search from '@/components/Search';
 import Table from '@/components/common/Table';
 import Tabs from '@/components/Tabs';
 import useAuthRouter from '@/hooks/useAuthRouter';
-import Search from '@/components/Search';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { learner_url } from '@/config/endpoints';
