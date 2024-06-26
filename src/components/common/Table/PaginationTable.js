@@ -18,7 +18,7 @@ import {useEffect, useState } from 'react';
     keys,
     filteredData,
     primaryKey,
-    onClick = () => { console.log("clicked"); }, 
+    onClick = () => { }, 
   }) {
 
     const [data, setData] = useState(filteredData);
