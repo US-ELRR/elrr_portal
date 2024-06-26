@@ -35,21 +35,21 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
-    - name: Docker login
-      env:
-       DOCKER_USER: ${{ secrets.DOCKER_USER }}
-       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: |
-       echo "Authenticate to Docker"
-       docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: Docker build
-      run: |
-       echo "Start docker build"
-       docker build . -t openlxp/elrr-portal
-    - name: Push Image
-      run: |
-       echo "Push new image to the Dockerhub repository"
-       docker push openlxp/elrr-portal
+    # - name: Docker login
+    #   env:
+    #    DOCKER_USER: ${{ secrets.DOCKER_USER }}
+    #    DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    #   run: |
+    #    echo "Authenticate to Docker"
+    #    docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    # - name: Docker build
+    #   run: |
+    #    echo "Start docker build"
+    #    docker build . -t openlxp/elrr-portal
+    # - name: Push Image
+    #   run: |
+    #    echo "Push new image to the Dockerhub repository"
+    #    docker push openlxp/elrr-portal
     # Push image to Amazon ECR
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
