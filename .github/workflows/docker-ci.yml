@@ -69,10 +69,10 @@ jobs:
         IMAGE_TAG: elrrportal
       run: |
         echo "Cloning private repository"
-        git clone https://openlxp-host:${{ secrets.ACCESS_TOKEN }}@github.com/US-ELRR/elrr-private.git
+        git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/US-ELRR/elrr-private.git
         echo "Private repository cloned successfully"
-        echo "Copying .env file from openlxp-private to current working directory"
-        cp ./openlxp-private/openlxp-xms-ui-env/.env .
+        echo "Copying .env file from elrr-private to current working directory"
+        cp ./elrr-private/elrr-portal-env/.env .
         echo "Copied .env file successfully"
         echo "Starting docker build"
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
