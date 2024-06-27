@@ -56,6 +56,14 @@ export default function CoursesPage() {
       });
   }, []);
 
+  function rewriteDate(value, index, array){
+    if('coursestartdate' in value){
+        value['coursestartdate'] = new Date(value['coursestartdate']).toDateString();
+    }
+    return value;
+  }
+  courses?.map(rewriteDate);
+
   const filterCourses = (courses, query) => {
     if (query.length < 1) { return courses }
     return courses?.filter(course => {
