@@ -18,7 +18,7 @@ export default function Tabs({ tabNames = [], components = [<div></div>] }) {
                                     'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-dod-500',
                                     'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 text-white',
                                     selected
-                                        ? 'bg-white shadow'
+                                        ? 'bg-white shadow text-dod-500'
                                         : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
                                 )
                             }
