@@ -26,7 +26,7 @@ export default function CompetenciesPage() {
   const filterComp = (competency, query) => {
     if (query.length < 1) { return competency }
     return competency.filter(competency => {
-      const compName = competency.title.toLowerCase()
+      const compName = competency.competencyframeworktitle.toLowerCase()
       return compName.includes(query.toLowerCase())
     })
   }

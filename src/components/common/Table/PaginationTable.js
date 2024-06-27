@@ -28,14 +28,15 @@ import {useEffect, useState } from 'react';
     const [upperBound, setUpperBound] = useState(25);
     const [reload, setReload] = useState(false);
 
+    
     useEffect(() => {
+        setData(filteredData);
         setTotalPages(Math.ceil(data?.length/25));
         setUpperBound(25);
         if (data?.length<upperBound){
             setUpperBound(data?.length);
         }
-    }, [data?.length, reload]);
-
+    }, [data?.length, reload, filteredData]);
 
     if (data?.length<upperBound){
         setUpperBound(data.length);
