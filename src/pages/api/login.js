@@ -11,7 +11,7 @@ export default function handler(req, res) {
   if (username.toLowerCase().includes('glass@us.navy.mil')) {
     return res.status(200).json(trainingManagerData);
   }
-  if (username.toLowerCase().includes('blanchard@us.navy.mil')) {
+  if (username.toLowerCase().includes('mack@us.navy.mil')) {
     return res.status(200).json(learnerData);
   }
   if (username.toLowerCase().includes('smith@us.navy.mil')) {
