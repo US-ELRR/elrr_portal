@@ -1,12 +1,27 @@
 
+import { learner_url } from '@/config/endpoints';
+import { useEffect, useState } from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import DetailsCard from '@/components/common/DetailsCard';
+import axios from 'axios';
 import useAuthRouter from '@/hooks/useAuthRouter';
-import useStore from '@/store/store';
 
 export default function PersonPage() {
   // user data from the store
-  const userData = useStore((state) => state.userData);
+  // const userData = useStore((state) => state.userData);
+
+  const [personnelInfo, setpersonnelInfo] = useState(null);
+
+  useEffect(() => {
+    axios.get(learner_url+"1")
+      .then((response) => {
+        setpersonnelInfo(response.data);
+      })
+      .catch((error) => {
+        console.log(error)
+        console.log("Courses unable to be loaded. Contact system admin.");
+      });
+  }, []);
 
   const {
     query: { },
@@ -15,7 +30,7 @@ export default function PersonPage() {
     <DefaultLayout>
       <div className='bg-gray-300 w-full py-2 '>
         <h1 className='text-3xl font-semibold text-center'>
-          {userData?.learner?.personnel?.person?.name}
+          {personnelInfo?.personnel?.person?.name}
         </h1>
       </div>
       <div className='grid grid-cols-3 gap-4'>
@@ -23,13 +38,13 @@ export default function PersonPage() {
           <DetailsCard
             obj={{
               // ...data?.person,
-              Id: userData?.learner?.personnel?.person?.personid,
+              Id: personnelInfo?.personnel?.person?.personid,
               'Human Resource Identifier':
-                userData?.learner?.personnel?.person?.humanResourceIdentifier,
-              Prefix: userData?.learner?.personnel?.person?.namePrefix,
-              'First Name': userData?.learner?.personnel?.person?.firstName,
-              'Middle Name': userData?.learner?.personnel?.person?.middleName,
-              'Last Name': userData?.learner?.personnel?.person?.lastName,
+                personnelInfo?.personnel?.person?.humanresourceidentifier,
+              Prefix: personnelInfo?.personnel?.person?.nameprefix,
+              'First Name': personnelInfo?.personnel?.person?.firstname,
+              'Middle Name': personnelInfo?.personnel?.person?.middlename,
+              'Last Name': personnelInfo?.personnel?.person?.lastname,
             }}
             title='Personnel Data'
             cols={2}
@@ -39,15 +54,15 @@ export default function PersonPage() {
           obj={{
             // ...data.contactInformation,
             'Phone Type':
-              userData?.learner?.personnel?.contactInformation
-                ?.telephonenumbertype,
+              personnelInfo?.personnel?.contactInformation
+                ?.telephonetype,
             Phone:
-              userData?.learner?.personnel?.contactInformation?.telephonenumber,
+              personnelInfo?.personnel?.contactInformation?.telephonenumber,
             'Email Type':
-              userData?.learner?.personnel?.contactInformation
+              personnelInfo?.personnel?.contactInformation
                 ?.electronicmailaddresstype,
             Email:
-              userData?.learner?.personnel?.contactInformation
+              personnelInfo?.personnel?.contactInformation
                 ?.electronicmailaddress,
           }}
           title='Contact Information'
@@ -55,7 +70,7 @@ export default function PersonPage() {
         />
         <div id='other-details' className='col-span-3'>
           <DetailsCard
-            obj={userData?.learner?.personnel?.organization}
+            obj={personnelInfo?.personnel?.organization}
             title='Organization Data'
             cols={3}
           />
